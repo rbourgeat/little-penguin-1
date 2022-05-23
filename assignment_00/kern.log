@@ -1,441 +1,437 @@
-May 23 17:06:08 rbourgea kernel: Loaded 128449 symbols from 1 module.
-May 23 17:06:08 rbourgea kernel: [    0.000000] Linux version 5.18.0-thor_kernel (root@rbourgea) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.38) #2 SMP PREEMPT_DYNAMIC Mon May 23 16:46:17 CEST 2022
-May 23 17:06:08 rbourgea kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-5.18-rc7 root=/dev/sda1 ro
-May 23 17:06:08 rbourgea kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
-May 23 17:06:08 rbourgea kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
-May 23 17:06:08 rbourgea kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
-May 23 17:06:08 rbourgea kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
-May 23 17:06:08 rbourgea kernel: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
-May 23 17:06:08 rbourgea kernel: [    0.000000] signal: max sigframe size: 1776
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-provided physical RAM map:
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
-May 23 17:06:08 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000011fffffff] usable
-May 23 17:06:08 rbourgea kernel: [    0.000000] NX (Execute Disable) protection: active
-May 23 17:06:08 rbourgea kernel: [    0.000000] SMBIOS 2.5 present.
-May 23 17:06:08 rbourgea kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
-May 23 17:06:08 rbourgea kernel: [    0.000000] Hypervisor detected: KVM
-May 23 17:06:08 rbourgea kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
-May 23 17:06:08 rbourgea kernel: [    0.000001] kvm-clock: using sched offset of 6638685695 cycles
-May 23 17:06:08 rbourgea kernel: [    0.000005] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
-May 23 17:06:08 rbourgea kernel: [    0.000008] tsc: Detected 2699.998 MHz processor
-May 23 17:06:08 rbourgea kernel: [    0.001439] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
-May 23 17:06:08 rbourgea kernel: [    0.001444] e820: remove [mem 0x000a0000-0x000fffff] usable
-May 23 17:06:08 rbourgea kernel: [    0.001449] last_pfn = 0x120000 max_arch_pfn = 0x400000000
-May 23 17:06:08 rbourgea kernel: [    0.001461] Disabled
-May 23 17:06:08 rbourgea kernel: [    0.001462] x86/PAT: MTRRs disabled, skipping PAT initialization too.
-May 23 17:06:08 rbourgea kernel: [    0.001465] CPU MTRRs all blank - virtualized system.
-May 23 17:06:08 rbourgea kernel: [    0.001467] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
-May 23 17:06:08 rbourgea kernel: [    0.001470] last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
-May 23 17:06:08 rbourgea kernel: [    0.001520] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
-May 23 17:06:08 rbourgea kernel: [    0.003200] ACPI: Early table checksum verification disabled
-May 23 17:06:08 rbourgea kernel: [    0.003212] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
-May 23 17:06:08 rbourgea kernel: [    0.003219] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
-May 23 17:06:08 rbourgea kernel: [    0.003227] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
-May 23 17:06:08 rbourgea kernel: [    0.003235] ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20120111)
-May 23 17:06:08 rbourgea kernel: [    0.003239] ACPI: FACS 0x00000000DFFF0200 000040
-May 23 17:06:08 rbourgea kernel: [    0.003242] ACPI: FACS 0x00000000DFFF0200 000040
-May 23 17:06:08 rbourgea kernel: [    0.003246] ACPI: APIC 0x00000000DFFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
-May 23 17:06:08 rbourgea kernel: [    0.003249] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20120111)
-May 23 17:06:08 rbourgea kernel: [    0.003252] ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
-May 23 17:06:08 rbourgea kernel: [    0.003254] ACPI: Reserving DSDT table memory at [mem 0xdfff0470-0xdfff2794]
-May 23 17:06:08 rbourgea kernel: [    0.003255] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
-May 23 17:06:08 rbourgea kernel: [    0.003256] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
-May 23 17:06:08 rbourgea kernel: [    0.003257] ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff0293]
-May 23 17:06:08 rbourgea kernel: [    0.003258] ACPI: Reserving SSDT table memory at [mem 0xdfff02a0-0xdfff046b]
-May 23 17:06:08 rbourgea kernel: [    0.003542] No NUMA configuration found
-May 23 17:06:08 rbourgea kernel: [    0.003544] Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
-May 23 17:06:08 rbourgea kernel: [    0.003548] NODE_DATA(0) allocated [mem 0x11fff8000-0x11fffbfff]
-May 23 17:06:08 rbourgea kernel: [    0.003565] Zone ranges:
-May 23 17:06:08 rbourgea kernel: [    0.003566]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
-May 23 17:06:08 rbourgea kernel: [    0.003568]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
-May 23 17:06:08 rbourgea kernel: [    0.003570]   Normal   [mem 0x0000000100000000-0x000000011fffffff]
-May 23 17:06:08 rbourgea kernel: [    0.003571] Movable zone start for each node
-May 23 17:06:08 rbourgea kernel: [    0.003572] Early memory node ranges
-May 23 17:06:08 rbourgea kernel: [    0.003573]   node   0: [mem 0x0000000000001000-0x000000000009efff]
-May 23 17:06:08 rbourgea kernel: [    0.003574]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
-May 23 17:06:08 rbourgea kernel: [    0.003576]   node   0: [mem 0x0000000100000000-0x000000011fffffff]
-May 23 17:06:08 rbourgea kernel: [    0.003577] Initmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
-May 23 17:06:08 rbourgea kernel: [    0.005339] On node 0, zone DMA: 1 pages in unavailable ranges
-May 23 17:06:08 rbourgea kernel: [    0.005382] On node 0, zone DMA: 97 pages in unavailable ranges
-May 23 17:06:08 rbourgea kernel: [    0.062093] On node 0, zone Normal: 16 pages in unavailable ranges
-May 23 17:06:08 rbourgea kernel: [    0.062748] ACPI: PM-Timer IO Port: 0x4008
-May 23 17:06:08 rbourgea kernel: [    0.062806] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
-May 23 17:06:08 rbourgea kernel: [    0.062811] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
-May 23 17:06:08 rbourgea kernel: [    0.062813] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
-May 23 17:06:08 rbourgea kernel: [    0.062817] ACPI: Using ACPI (MADT) for SMP configuration information
-May 23 17:06:08 rbourgea kernel: [    0.062824] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
-May 23 17:06:08 rbourgea kernel: [    0.062846] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
-May 23 17:06:08 rbourgea kernel: [    0.062848] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
-May 23 17:06:08 rbourgea kernel: [    0.062849] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
-May 23 17:06:08 rbourgea kernel: [    0.062850] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
-May 23 17:06:08 rbourgea kernel: [    0.062851] PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
-May 23 17:06:08 rbourgea kernel: [    0.062853] PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
-May 23 17:06:08 rbourgea kernel: [    0.062854] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
-May 23 17:06:08 rbourgea kernel: [    0.062854] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
-May 23 17:06:08 rbourgea kernel: [    0.062855] PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
-May 23 17:06:08 rbourgea kernel: [    0.062856] PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
-May 23 17:06:08 rbourgea kernel: [    0.062857] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
-May 23 17:06:08 rbourgea kernel: [    0.062859] [mem 0xe0000000-0xfebfffff] available for PCI devices
-May 23 17:06:08 rbourgea kernel: [    0.062860] Booting paravirtualized kernel on KVM
-May 23 17:06:08 rbourgea kernel: [    0.062863] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
-May 23 17:06:08 rbourgea kernel: [    0.067995] setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:1 nr_node_ids:1
-May 23 17:06:08 rbourgea kernel: [    0.069486] percpu: Embedded 52 pages/cpu s176040 r8192 d28760 u2097152
-May 23 17:06:08 rbourgea kernel: [    0.069493] pcpu-alloc: s176040 r8192 d28760 u2097152 alloc=1*2097152
-May 23 17:06:08 rbourgea kernel: [    0.069496] pcpu-alloc: [0] 0 
-May 23 17:06:08 rbourgea kernel: [    0.069513] Fallback order for Node 0: 0 
-May 23 17:06:08 rbourgea kernel: [    0.069516] Built 1 zonelists, mobility grouping on.  Total pages: 1031920
-May 23 17:06:08 rbourgea kernel: [    0.069518] Policy zone: Normal
-May 23 17:06:08 rbourgea kernel: [    0.069519] Kernel command line: BOOT_IMAGE=/vmlinuz-5.18-rc7 root=/dev/sda1 ro
-May 23 17:06:08 rbourgea kernel: [    0.069544] Unknown kernel command line parameters "BOOT_IMAGE=/vmlinuz-5.18-rc7", will be passed to user space.
-May 23 17:06:08 rbourgea kernel: [    0.072521] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.074068] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.074117] mem auto-init: stack:off, heap alloc:off, heap free:off
-May 23 17:06:08 rbourgea kernel: [    0.130011] Memory: 4019800K/4193848K available (16396K kernel code, 2671K rwdata, 5084K rodata, 1276K init, 1216K bss, 173788K reserved, 0K cma-reserved)
-May 23 17:06:08 rbourgea kernel: [    0.130047] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
-May 23 17:06:08 rbourgea kernel: [    0.130055] Kernel/User page tables isolation: enabled
-May 23 17:06:08 rbourgea kernel: [    0.131040] Dynamic Preempt: voluntary
-May 23 17:06:08 rbourgea kernel: [    0.132421] rcu: Preemptible hierarchical RCU implementation.
-May 23 17:06:08 rbourgea kernel: [    0.132423] rcu: ^IRCU event tracing is enabled.
-May 23 17:06:08 rbourgea kernel: [    0.132424] rcu: ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=1.
-May 23 17:06:08 rbourgea kernel: [    0.132425] ^ITrampoline variant of Tasks RCU enabled.
-May 23 17:06:08 rbourgea kernel: [    0.132427] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
-May 23 17:06:08 rbourgea kernel: [    0.132428] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
-May 23 17:06:08 rbourgea kernel: [    0.133466] NR_IRQS: 4352, nr_irqs: 256, preallocated irqs: 16
-May 23 17:06:08 rbourgea kernel: [    0.133822] random: get_random_bytes called from start_kernel+0x493/0x665 with crng_init=0
-May 23 17:06:08 rbourgea kernel: [    0.139217] Console: colour VGA+ 80x25
-May 23 17:06:08 rbourgea kernel: [    0.168315] printk: console [tty0] enabled
-May 23 17:06:08 rbourgea kernel: [    0.168529] ACPI: Core revision 20211217
-May 23 17:06:08 rbourgea kernel: [    0.168910] APIC: Switch to symmetric I/O mode setup
-May 23 17:06:08 rbourgea kernel: [    0.170203] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
-May 23 17:06:08 rbourgea kernel: [    0.170464] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x26eb3cc21a9, max_idle_ns: 440795299783 ns
-May 23 17:06:08 rbourgea kernel: [    0.170866] Calibrating delay loop (skipped) preset value.. 5399.99 BogoMIPS (lpj=2699998)
-May 23 17:06:08 rbourgea kernel: [    0.171866] pid_max: default: 32768 minimum: 301
-May 23 17:06:08 rbourgea kernel: [    0.172091] LSM: Security Framework initializing
-May 23 17:06:08 rbourgea kernel: [    0.172303] SELinux:  Initializing.
-May 23 17:06:08 rbourgea kernel: [    0.172514] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.172839] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.172861] process: using mwait in idle threads
-May 23 17:06:08 rbourgea kernel: [    0.172861] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
-May 23 17:06:08 rbourgea kernel: [    0.172861] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
-May 23 17:06:08 rbourgea kernel: [    0.172861] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
-May 23 17:06:08 rbourgea kernel: [    0.172861] Spectre V2 : Mitigation: Retpolines
-May 23 17:06:08 rbourgea kernel: [    0.172861] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
-May 23 17:06:08 rbourgea kernel: [    0.172861] Speculative Store Bypass: Vulnerable
-May 23 17:06:08 rbourgea kernel: [    0.172861] SRBDS: Unknown: Dependent on hypervisor status
-May 23 17:06:08 rbourgea kernel: [    0.172861] MDS: Mitigation: Clear CPU buffers
-May 23 17:06:08 rbourgea kernel: [    0.181873] Freeing SMP alternatives memory: 44K
-May 23 17:06:08 rbourgea kernel: [    0.286834] smpboot: CPU0: Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz (family: 0x6, model: 0x3d, stepping: 0x4)
-May 23 17:06:08 rbourgea kernel: [    0.286861] cblist_init_generic: Setting adjustable number of callback queues.
-May 23 17:06:08 rbourgea kernel: [    0.286861] cblist_init_generic: Setting shift to 0 and lim to 1.
-May 23 17:06:08 rbourgea kernel: [    0.286861] Performance Events: unsupported p6 CPU model 61 no PMU driver, software events only.
-May 23 17:06:08 rbourgea kernel: [    0.286861] rcu: Hierarchical SRCU implementation.
-May 23 17:06:08 rbourgea kernel: [    0.286861] smp: Bringing up secondary CPUs ...
-May 23 17:06:08 rbourgea kernel: [    0.286861] smp: Brought up 1 node, 1 CPU
-May 23 17:06:08 rbourgea kernel: [    0.286861] smpboot: Max logical packages: 1
-May 23 17:06:08 rbourgea kernel: [    0.286861] smpboot: Total of 1 processors activated (5399.99 BogoMIPS)
-May 23 17:06:08 rbourgea kernel: [    0.286861] devtmpfs: initialized
-May 23 17:06:08 rbourgea kernel: [    0.286861] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
-May 23 17:06:08 rbourgea kernel: [    0.286861] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.286866] PM: RTC time: 15:06:02, date: 2022-05-23
-May 23 17:06:08 rbourgea kernel: [    0.287884] NET: Registered PF_NETLINK/PF_ROUTE protocol family
-May 23 17:06:08 rbourgea kernel: [    0.288213] audit: initializing netlink subsys (disabled)
-May 23 17:06:08 rbourgea kernel: [    0.288547] thermal_sys: Registered thermal governor 'step_wise'
-May 23 17:06:08 rbourgea kernel: [    0.288549] thermal_sys: Registered thermal governor 'user_space'
-May 23 17:06:08 rbourgea kernel: [    0.288812] audit: type=2000 audit(1653318371.502:1): state=initialized audit_enabled=0 res=1
-May 23 17:06:08 rbourgea kernel: [    0.288861] cpuidle: using governor menu
-May 23 17:06:08 rbourgea kernel: [    0.288907] PCI: Using configuration type 1 for base access
-May 23 17:06:08 rbourgea kernel: [    0.291582] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
-May 23 17:06:08 rbourgea kernel: [    0.291861] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
-May 23 17:06:08 rbourgea kernel: [    0.291927] ACPI: Added _OSI(Module Device)
-May 23 17:06:08 rbourgea kernel: [    0.292126] ACPI: Added _OSI(Processor Device)
-May 23 17:06:08 rbourgea kernel: [    0.292324] ACPI: Added _OSI(3.0 _SCP Extensions)
-May 23 17:06:08 rbourgea kernel: [    0.292529] ACPI: Added _OSI(Processor Aggregator Device)
-May 23 17:06:08 rbourgea kernel: [    0.292751] ACPI: Added _OSI(Linux-Dell-Video)
-May 23 17:06:08 rbourgea kernel: [    0.292861] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
-May 23 17:06:08 rbourgea kernel: [    0.292861] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
-May 23 17:06:08 rbourgea kernel: [    0.294177] ACPI: 2 ACPI AML tables successfully acquired and loaded
-May 23 17:06:08 rbourgea kernel: [    0.301153] ACPI: Interpreter enabled
-May 23 17:06:08 rbourgea kernel: [    0.301359] ACPI: PM: (supports S0 S5)
-May 23 17:06:08 rbourgea kernel: [    0.301544] ACPI: Using IOAPIC for interrupt routing
-May 23 17:06:08 rbourgea kernel: [    0.301875] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-May 23 17:06:08 rbourgea kernel: [    0.302378] ACPI: Enabled 2 GPEs in block 00 to 07
-May 23 17:06:08 rbourgea kernel: [    0.308276] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
-May 23 17:06:08 rbourgea kernel: [    0.308648] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
-May 23 17:06:08 rbourgea kernel: [    0.308861] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
-May 23 17:06:08 rbourgea kernel: [    0.310064] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
-May 23 17:06:08 rbourgea kernel: [    0.311141] PCI host bridge to bus 0000:00
-May 23 17:06:08 rbourgea kernel: [    0.311459] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
-May 23 17:06:08 rbourgea kernel: [    0.311861] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
-May 23 17:06:08 rbourgea kernel: [    0.311861] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
-May 23 17:06:08 rbourgea kernel: [    0.311861] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
-May 23 17:06:08 rbourgea kernel: [    0.311906] pci_bus 0000:00: root bus resource [bus 00-ff]
-May 23 17:06:08 rbourgea kernel: [    0.314919] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
-May 23 17:06:08 rbourgea kernel: [    0.316706] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
-May 23 17:06:08 rbourgea kernel: [    0.319405] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
-May 23 17:06:08 rbourgea kernel: [    0.320706] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
-May 23 17:06:08 rbourgea kernel: [    0.321219] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
-May 23 17:06:08 rbourgea kernel: [    0.321610] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
-May 23 17:06:08 rbourgea kernel: [    0.321861] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
-May 23 17:06:08 rbourgea kernel: [    0.321861] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
-May 23 17:06:08 rbourgea kernel: [    0.323132] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
-May 23 17:06:08 rbourgea kernel: [    0.329886] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
-May 23 17:06:08 rbourgea kernel: [    0.335887] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe0ffffff pref]
-May 23 17:06:08 rbourgea kernel: [    0.342920] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
-May 23 17:06:08 rbourgea kernel: [    0.372883] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
-May 23 17:06:08 rbourgea kernel: [    0.382097] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
-May 23 17:06:08 rbourgea kernel: [    0.390892] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
-May 23 17:06:08 rbourgea kernel: [    0.404892] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
-May 23 17:06:08 rbourgea kernel: [    0.433058] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
-May 23 17:06:08 rbourgea kernel: [    0.438885] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
-May 23 17:06:08 rbourgea kernel: [    0.444944] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
-May 23 17:06:08 rbourgea kernel: [    0.448967] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
-May 23 17:06:08 rbourgea kernel: [    0.468198] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
-May 23 17:06:08 rbourgea kernel: [    0.471895] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
-May 23 17:06:08 rbourgea kernel: [    0.473871] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
-May 23 17:06:08 rbourgea kernel: [    0.476555] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
-May 23 17:06:08 rbourgea kernel: [    0.478948] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
-May 23 17:06:08 rbourgea kernel: [    0.511433] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
-May 23 17:06:08 rbourgea kernel: [    0.515128] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
-May 23 17:06:08 rbourgea kernel: [    0.516034] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
-May 23 17:06:08 rbourgea kernel: [    0.520948] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
-May 23 17:06:08 rbourgea kernel: [    0.524883] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
-May 23 17:06:08 rbourgea kernel: [    0.526982] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
-May 23 17:06:08 rbourgea kernel: [    0.532878] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
-May 23 17:06:08 rbourgea kernel: [    0.538956] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
-May 23 17:06:08 rbourgea kernel: [    0.543891] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
-May 23 17:06:08 rbourgea kernel: [    0.547890] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
-May 23 17:06:08 rbourgea kernel: [    0.571256] ACPI: PCI: Interrupt link LNKA configured for IRQ 11
-May 23 17:06:08 rbourgea kernel: [    0.572038] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
-May 23 17:06:08 rbourgea kernel: [    0.573216] ACPI: PCI: Interrupt link LNKC configured for IRQ 9
-May 23 17:06:08 rbourgea kernel: [    0.573978] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
-May 23 17:06:08 rbourgea kernel: [    0.575074] iommu: Default domain type: Translated 
-May 23 17:06:08 rbourgea kernel: [    0.575300] iommu: DMA domain TLB invalidation policy: lazy mode 
-May 23 17:06:08 rbourgea kernel: [    0.575646] SCSI subsystem initialized
-May 23 17:06:08 rbourgea kernel: [    0.575861] libata version 3.00 loaded.
-May 23 17:06:08 rbourgea kernel: [    0.575861] ACPI: bus type USB registered
-May 23 17:06:08 rbourgea kernel: [    0.575861] usbcore: registered new interface driver usbfs
-May 23 17:06:08 rbourgea kernel: [    0.575861] usbcore: registered new interface driver hub
-May 23 17:06:08 rbourgea kernel: [    0.575861] usbcore: registered new device driver usb
-May 23 17:06:08 rbourgea kernel: [    0.575861] pps_core: LinuxPPS API ver. 1 registered
-May 23 17:06:08 rbourgea kernel: [    0.575861] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
-May 23 17:06:08 rbourgea kernel: [    0.575861] PTP clock support registered
-May 23 17:06:08 rbourgea kernel: [    0.575861] Advanced Linux Sound Architecture Driver Initialized.
-May 23 17:06:08 rbourgea kernel: [    0.575861] NetLabel: Initializing
-May 23 17:06:08 rbourgea kernel: [    0.575870] NetLabel:  domain hash size = 128
-May 23 17:06:08 rbourgea kernel: [    0.576161] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
-May 23 17:06:08 rbourgea kernel: [    0.576568] NetLabel:  unlabeled traffic allowed by default
-May 23 17:06:08 rbourgea kernel: [    0.576957] PCI: Using ACPI for IRQ routing
-May 23 17:06:08 rbourgea kernel: [    0.577289] PCI: pci_cache_line_size set to 64 bytes
-May 23 17:06:08 rbourgea kernel: [    0.591916] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
-May 23 17:06:08 rbourgea kernel: [    0.591934] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
-May 23 17:06:08 rbourgea kernel: [    0.592077] pci 0000:00:02.0: vgaarb: setting as boot VGA device
-May 23 17:06:08 rbourgea kernel: [    0.592861] pci 0000:00:02.0: vgaarb: bridge control possible
-May 23 17:06:08 rbourgea kernel: [    0.592861] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
-May 23 17:06:08 rbourgea kernel: [    0.592871] vgaarb: loaded
-May 23 17:06:08 rbourgea kernel: [    0.593202] clocksource: Switched to clocksource kvm-clock
-May 23 17:06:08 rbourgea kernel: [    0.620398] VFS: Disk quotas dquot_6.6.0
-May 23 17:06:08 rbourgea kernel: [    0.620860] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-May 23 17:06:08 rbourgea kernel: [    0.621741] pnp: PnP ACPI init
-May 23 17:06:08 rbourgea kernel: [    0.799216] pnp: PnP ACPI: found 2 devices
-May 23 17:06:08 rbourgea kernel: [    0.807552] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
-May 23 17:06:08 rbourgea kernel: [    0.808259] NET: Registered PF_INET protocol family
-May 23 17:06:08 rbourgea kernel: [    0.808670] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.810449] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.810708] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.810708] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.820790] TCP: Hash tables configured (established 32768 bind 32768)
-May 23 17:06:08 rbourgea kernel: [    0.821258] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.821604] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
-May 23 17:06:08 rbourgea kernel: [    0.821604] NET: Registered PF_UNIX/PF_LOCAL protocol family
-May 23 17:06:08 rbourgea kernel: [    0.821604] RPC: Registered named UNIX socket transport module.
-May 23 17:06:08 rbourgea kernel: [    0.821604] RPC: Registered udp transport module.
-May 23 17:06:08 rbourgea kernel: [    0.821604] RPC: Registered tcp transport module.
-May 23 17:06:08 rbourgea kernel: [    0.821604] RPC: Registered tcp NFSv4.1 backchannel transport module.
-May 23 17:06:08 rbourgea kernel: [    0.827500] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
-May 23 17:06:08 rbourgea kernel: [    0.828439] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
-May 23 17:06:08 rbourgea kernel: [    0.828859] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
-May 23 17:06:08 rbourgea kernel: [    0.837008] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
-May 23 17:06:08 rbourgea kernel: [    0.837604] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
-May 23 17:06:08 rbourgea kernel: [    0.843923] pci 0000:00:01.0: Activating ISA DMA hang workarounds
-May 23 17:06:08 rbourgea kernel: [    0.860713] pci 0000:00:06.0: quirk_usb_early_handoff+0x0/0x700 took 15711 usecs
-May 23 17:06:08 rbourgea kernel: [    0.861488] PCI: CLS 0 bytes, default 64
-May 23 17:06:08 rbourgea kernel: [    0.861845] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
-May 23 17:06:08 rbourgea kernel: [    0.862220] software IO TLB: mapped [mem 0x00000000dbff0000-0x00000000dfff0000] (64MB)
-May 23 17:06:08 rbourgea kernel: [    0.862360] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
-May 23 17:06:08 rbourgea kernel: [    0.863496] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x26eb3cc21a9, max_idle_ns: 440795299783 ns
-May 23 17:06:08 rbourgea kernel: [    0.864398] clocksource: Switched to clocksource tsc
-May 23 17:06:08 rbourgea kernel: [    0.864778] platform rtc_cmos: registered platform RTC device (no PNP device found)
-May 23 17:06:08 rbourgea kernel: [    0.870197] Initialise system trusted keyrings
-May 23 17:06:08 rbourgea kernel: [    0.870197] workingset: timestamp_bits=56 max_order=20 bucket_order=0
-May 23 17:06:08 rbourgea kernel: [    0.870197] NFS: Registering the id_resolver key type
-May 23 17:06:08 rbourgea kernel: [    0.870197] Key type id_resolver registered
-May 23 17:06:08 rbourgea kernel: [    0.870197] Key type id_legacy registered
-May 23 17:06:08 rbourgea kernel: [    0.870197] 9p: Installing v9fs 9p2000 file system support
-May 23 17:06:08 rbourgea kernel: [    0.905645] Key type asymmetric registered
-May 23 17:06:08 rbourgea kernel: [    0.906488] Asymmetric key parser 'x509' registered
-May 23 17:06:08 rbourgea kernel: [    0.906886] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
-May 23 17:06:08 rbourgea kernel: [    0.907416] io scheduler mq-deadline registered
-May 23 17:06:08 rbourgea kernel: [    0.907457] io scheduler kyber registered
-May 23 17:06:08 rbourgea kernel: [    0.943335] ACPI: AC: AC Adapter [AC] (on-line)
-May 23 17:06:08 rbourgea kernel: [    0.943863] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
-May 23 17:06:08 rbourgea kernel: [    0.944143] ACPI: button: Power Button [PWRF]
-May 23 17:06:08 rbourgea kernel: [    0.945239] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
-May 23 17:06:08 rbourgea kernel: [    0.945848] ACPI: button: Sleep Button [SLPF]
-May 23 17:06:08 rbourgea kernel: [    0.946602] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
-May 23 17:06:08 rbourgea kernel: [    0.947495] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
-May 23 17:06:08 rbourgea kernel: [    0.973678] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
-May 23 17:06:08 rbourgea kernel: [    0.974488] Non-volatile memory driver v1.3
-May 23 17:06:08 rbourgea kernel: [    0.974488] Linux agpgart interface v0.103
-May 23 17:06:08 rbourgea kernel: [    0.975310] ACPI: bus type drm_connector registered
-May 23 17:06:08 rbourgea kernel: [    0.976240] loop: module loaded
-May 23 17:06:08 rbourgea kernel: [    0.976240] ahci 0000:00:0d.0: version 3.0
-May 23 17:06:08 rbourgea kernel: [    0.983529] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
-May 23 17:06:08 rbourgea kernel: [    0.984589] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 3 ports 3 Gbps 0x7 impl SATA mode
-May 23 17:06:08 rbourgea kernel: [    0.985111] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
-May 23 17:06:08 rbourgea kernel: [    0.987779] ACPI: battery: Slot [BAT0] (battery present)
-May 23 17:06:08 rbourgea kernel: [    0.991252] scsi host0: ahci
-May 23 17:06:08 rbourgea kernel: [    0.991632] scsi host1: ahci
-May 23 17:06:08 rbourgea kernel: [    0.991686] scsi host2: ahci
-May 23 17:06:08 rbourgea kernel: [    0.991686] ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
-May 23 17:06:08 rbourgea kernel: [    0.991686] ata2: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806180 irq 21
-May 23 17:06:08 rbourgea kernel: [    0.993386] ata3: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806200 irq 21
-May 23 17:06:08 rbourgea kernel: [    1.015590] ata_piix 0000:00:01.1: version 2.13
-May 23 17:06:08 rbourgea kernel: [    1.016484] scsi host3: ata_piix
-May 23 17:06:08 rbourgea kernel: [    1.016869] scsi host4: ata_piix
-May 23 17:06:08 rbourgea kernel: [    1.016906] ata4: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
-May 23 17:06:08 rbourgea kernel: [    1.016906] ata5: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
-May 23 17:06:08 rbourgea kernel: [    1.018784] e100: Intel(R) PRO/100 Network Driver
-May 23 17:06:08 rbourgea kernel: [    1.019077] e100: Copyright(c) 1999-2006 Intel Corporation
-May 23 17:06:08 rbourgea kernel: [    1.025509] e1000: Intel(R) PRO/1000 Network Driver
-May 23 17:06:08 rbourgea kernel: [    1.025887] e1000: Copyright (c) 1999-2006 Intel Corporation.
-May 23 17:06:08 rbourgea kernel: [    1.192674] ata5.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
-May 23 17:06:08 rbourgea kernel: [    1.336698] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
-May 23 17:06:08 rbourgea kernel: [    1.337543] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
-May 23 17:06:08 rbourgea kernel: [    1.337792] ata1.00: 31457280 sectors, multi 128: LBA48 NCQ (depth 32)
-May 23 17:06:08 rbourgea kernel: [    1.343360] ata1.00: configured for UDMA/133
-May 23 17:06:08 rbourgea kernel: [    1.343774] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
-May 23 17:06:08 rbourgea kernel: [    1.344329] scsi 0:0:0:0: Attached scsi generic sg0 type 0
-May 23 17:06:08 rbourgea kernel: [    1.344729] sd 0:0:0:0: [sda] 31457280 512-byte logical blocks: (16.1 GB/15.0 GiB)
-May 23 17:06:08 rbourgea kernel: [    1.345074] sd 0:0:0:0: [sda] Write Protect is off
-May 23 17:06:08 rbourgea kernel: [    1.345229] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
-May 23 17:06:08 rbourgea kernel: [    1.345229] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
-May 23 17:06:08 rbourgea kernel: [    1.351468]  sda: sda1 sda2 sda3
-May 23 17:06:08 rbourgea kernel: [    1.352382] sd 0:0:0:0: [sda] Attached SCSI disk
-May 23 17:06:08 rbourgea kernel: [    1.515957] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:ea:c8:43
-May 23 17:06:08 rbourgea kernel: [    1.515989] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
-May 23 17:06:08 rbourgea kernel: [    1.516544] e1000e: Intel(R) PRO/1000 Network Driver
-May 23 17:06:08 rbourgea kernel: [    1.516757] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
-May 23 17:06:08 rbourgea kernel: [    1.517003] sky2: driver version 1.30
-May 23 17:06:08 rbourgea kernel: [    1.517254] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-May 23 17:06:08 rbourgea kernel: [    1.517507] ehci-pci: EHCI PCI platform driver
-May 23 17:06:08 rbourgea kernel: [    1.517534] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
-May 23 17:06:08 rbourgea kernel: [    1.517534] ohci-pci: OHCI PCI platform driver
-May 23 17:06:08 rbourgea kernel: [    1.518750] ohci-pci 0000:00:06.0: OHCI PCI host controller
-May 23 17:06:08 rbourgea kernel: [    1.519010] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
-May 23 17:06:08 rbourgea kernel: [    1.519444] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
-May 23 17:06:08 rbourgea kernel: [    1.572075] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.18
-May 23 17:06:08 rbourgea kernel: [    1.572645] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
-May 23 17:06:08 rbourgea kernel: [    1.572918] usb usb1: Product: OHCI PCI host controller
-May 23 17:06:08 rbourgea kernel: [    1.572918] usb usb1: Manufacturer: Linux 5.18.0-thor_kernel ohci_hcd
-May 23 17:06:08 rbourgea kernel: [    1.572918] usb usb1: SerialNumber: 0000:00:06.0
-May 23 17:06:08 rbourgea kernel: [    1.572918] hub 1-0:1.0: USB hub found
-May 23 17:06:08 rbourgea kernel: [    1.575055] hub 1-0:1.0: 12 ports detected
-May 23 17:06:08 rbourgea kernel: [    1.576551] uhci_hcd: USB Universal Host Controller Interface driver
-May 23 17:06:08 rbourgea kernel: [    1.576864] usbcore: registered new interface driver usblp
-May 23 17:06:08 rbourgea kernel: [    1.576985] usbcore: registered new interface driver usb-storage
-May 23 17:06:08 rbourgea kernel: [    1.576985] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-May 23 17:06:08 rbourgea kernel: [    1.578309] serio: i8042 KBD port at 0x60,0x64 irq 1
-May 23 17:06:08 rbourgea kernel: [    1.578548] serio: i8042 AUX port at 0x60,0x64 irq 12
-May 23 17:06:08 rbourgea kernel: [    1.579341] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
-May 23 17:06:08 rbourgea kernel: [    1.581268] rtc_cmos rtc_cmos: registered as rtc0
-May 23 17:06:08 rbourgea kernel: [    1.581514] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
-May 23 17:06:08 rbourgea kernel: [    1.581807] fail to initialize ptp_kvm
-May 23 17:06:08 rbourgea kernel: [    1.581877] device-mapper: ioctl: 4.46.0-ioctl (2022-02-22) initialised: dm-devel@redhat.com
-May 23 17:06:08 rbourgea kernel: [    1.582522] intel_pstate: CPU model not supported
-May 23 17:06:08 rbourgea kernel: [    1.582765] hid: raw HID events driver (C) Jiri Kosina
-May 23 17:06:08 rbourgea kernel: [    1.583092] usbcore: registered new interface driver usbhid
-May 23 17:06:08 rbourgea kernel: [    1.583154] usbhid: USB HID core driver
-May 23 17:06:08 rbourgea kernel: [    1.585352] Initializing XFRM netlink socket
-May 23 17:06:08 rbourgea kernel: [    1.585655] NET: Registered PF_INET6 protocol family
-May 23 17:06:08 rbourgea kernel: [    1.586166] Segment Routing with IPv6
-May 23 17:06:08 rbourgea kernel: [    1.586361] In-situ OAM (IOAM) with IPv6
-May 23 17:06:08 rbourgea kernel: [    1.586592] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
-May 23 17:06:08 rbourgea kernel: [    1.586955] NET: Registered PF_PACKET protocol family
-May 23 17:06:08 rbourgea kernel: [    1.587074] 9pnet: Installing 9P2000 support
-May 23 17:06:08 rbourgea kernel: [    1.587583] Key type dns_resolver registered
-May 23 17:06:08 rbourgea kernel: [    1.587901] IPI shorthand broadcast: enabled
-May 23 17:06:08 rbourgea kernel: [    1.588112] sched_clock: Marking stable (1550468537, 37056183)->(1639066405, -51541685)
-May 23 17:06:08 rbourgea kernel: [    1.588654] registered taskstats version 1
-May 23 17:06:08 rbourgea kernel: [    1.590519] Loading compiled-in X.509 certificates
-May 23 17:06:08 rbourgea kernel: [    1.593352] cryptomgr_test (52) used greatest stack depth: 15368 bytes left
-May 23 17:06:08 rbourgea kernel: [    1.595076] PM:   Magic number: 6:378:134
-May 23 17:06:08 rbourgea kernel: [    1.595426] e1000 0000:00:03.0: hash matches
-May 23 17:06:08 rbourgea kernel: [    1.596142] printk: console [netcon0] enabled
-May 23 17:06:08 rbourgea kernel: [    1.596358] netconsole: network logging started
-May 23 17:06:08 rbourgea kernel: [    1.596723] cfg80211: Loading compiled-in X.509 certificates for regulatory database
-May 23 17:06:08 rbourgea kernel: [    1.597551] kworker/u2:6 (74) used greatest stack depth: 14736 bytes left
-May 23 17:06:08 rbourgea kernel: [    1.598669] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
-May 23 17:06:08 rbourgea kernel: [    1.599079] ALSA device list:
-May 23 17:06:08 rbourgea kernel: [    1.599326]   No soundcards found.
-May 23 17:06:08 rbourgea kernel: [    1.599672] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
-May 23 17:06:08 rbourgea kernel: [    1.600409] cfg80211: failed to load regulatory.db
-May 23 17:06:08 rbourgea kernel: [    1.657740] ata2: SATA link down (SStatus 0 SControl 300)
-May 23 17:06:08 rbourgea kernel: [    1.788759] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
-May 23 17:06:08 rbourgea kernel: [    1.870563] usb 1-1: new full-speed USB device number 2 using ohci-pci
-May 23 17:06:08 rbourgea kernel: [    1.972146] ata3: SATA link down (SStatus 0 SControl 300)
-May 23 17:06:08 rbourgea kernel: [    1.973170] scsi 4:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
-May 23 17:06:08 rbourgea kernel: [    1.989799] sr 4:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
-May 23 17:06:08 rbourgea kernel: [    1.990340] cdrom: Uniform CD-ROM driver Revision: 3.20
-May 23 17:06:08 rbourgea kernel: [    2.004495] sr 4:0:0:0: Attached scsi CD-ROM sr0
-May 23 17:06:08 rbourgea kernel: [    2.004645] sr 4:0:0:0: Attached scsi generic sg1 type 5
-May 23 17:06:08 rbourgea kernel: [    2.004905] md: Waiting for all devices to be available before autodetect
-May 23 17:06:08 rbourgea kernel: [    2.005164] md: If you don't use raid, use raid=noautodetect
-May 23 17:06:08 rbourgea kernel: [    2.005393] md: Autodetecting RAID arrays.
-May 23 17:06:08 rbourgea kernel: [    2.005582] md: autorun ...
-May 23 17:06:08 rbourgea kernel: [    2.005739] md: ... autorun DONE.
-May 23 17:06:08 rbourgea kernel: [    2.012377] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
-May 23 17:06:08 rbourgea kernel: [    2.012679] EXT4-fs (sda1): write access will be enabled during recovery
-May 23 17:06:08 rbourgea kernel: [    2.020689] random: fast init done
-May 23 17:06:08 rbourgea kernel: [    2.131435] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
-May 23 17:06:08 rbourgea kernel: [    2.132062] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
-May 23 17:06:08 rbourgea kernel: [    2.132334] usb 1-1: Product: USB Tablet
-May 23 17:06:08 rbourgea kernel: [    2.132521] usb 1-1: Manufacturer: VirtualBox
-May 23 17:06:08 rbourgea kernel: [    2.143436] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
-May 23 17:06:08 rbourgea kernel: [    2.144060] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
-May 23 17:06:08 rbourgea kernel: [    2.358424] EXT4-fs (sda1): orphan cleanup on readonly fs
-May 23 17:06:08 rbourgea kernel: [    2.359353] EXT4-fs (sda1): 6 orphan inodes deleted
-May 23 17:06:08 rbourgea kernel: [    2.359574] EXT4-fs (sda1): recovery complete
-May 23 17:06:08 rbourgea kernel: [    2.364118] EXT4-fs (sda1): mounted filesystem with ordered data mode. Quota mode: none.
-May 23 17:06:08 rbourgea kernel: [    2.365786] VFS: Mounted root (ext4 filesystem) readonly on device 8:1.
-May 23 17:06:08 rbourgea kernel: [    2.367733] devtmpfs: mounted
-May 23 17:06:08 rbourgea kernel: [    2.368113] Freeing unused kernel image (initmem) memory: 1276K
-May 23 17:06:08 rbourgea kernel: [    2.368366] Write protecting the kernel read-only data: 24576k
-May 23 17:06:08 rbourgea kernel: [    2.368998] Freeing unused kernel image (text/rodata gap) memory: 2032K
-May 23 17:06:08 rbourgea kernel: [    2.369458] Freeing unused kernel image (rodata/data gap) memory: 1060K
-May 23 17:06:08 rbourgea kernel: [    2.369729] Run /sbin/init as init process
-May 23 17:06:08 rbourgea kernel: [    2.369921]   with arguments:
-May 23 17:06:08 rbourgea kernel: [    2.369922]     /sbin/init
-May 23 17:06:08 rbourgea kernel: [    2.369923]   with environment:
-May 23 17:06:08 rbourgea kernel: [    2.369923]     HOME=/
-May 23 17:06:08 rbourgea kernel: [    2.369924]     TERM=linux
-May 23 17:06:08 rbourgea kernel: [    2.369924]     BOOT_IMAGE=/vmlinuz-5.18-rc7
-May 23 17:06:08 rbourgea kernel: [    2.452042] stty (84) used greatest stack depth: 13680 bytes left
-May 23 17:06:08 rbourgea kernel: [    2.499638] mount (91) used greatest stack depth: 13632 bytes left
-May 23 17:06:08 rbourgea kernel: [    2.607769] ip (136) used greatest stack depth: 12336 bytes left
-May 23 17:06:08 rbourgea kernel: <30>[    2.701414] udevd[161]: starting version 3.2.11
-May 23 17:06:08 rbourgea kernel: [    3.316650] random: crng init done
-May 23 17:06:08 rbourgea kernel: <30>[    3.327622] udevd[162]: starting eudev-3.2.11
-May 23 17:06:08 rbourgea kernel: [    4.373765] Adding 204796k swap on /dev/sda2.  Priority:1 extents:1 across:204796k 
-May 23 17:06:08 rbourgea kernel: [    4.395365] EXT4-fs (sda1): re-mounted. Quota mode: none.
-May 23 17:06:08 rbourgea kernel: [    4.454208] EXT4-fs (sda1): re-mounted. Quota mode: none.
-May 23 17:06:08 rbourgea kernel: [    4.499355] EXT4-fs (sda3): recovery complete
-May 23 17:06:08 rbourgea kernel: [    4.500454] EXT4-fs (sda3): mounted filesystem with ordered data mode. Quota mode: none.
-May 23 17:06:08 rbourgea kernel: [    5.712094] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
-May 23 17:06:08 rbourgea kernel: [    5.712882] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+May 23 16:49:38 rbourgea kernel: [    0.000000] Linux version 5.18.0-rc7 (root@rbourgea) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.38) #1 SMP PREEMPT_DYNAMIC Sun May 22 16:49:01 CEST 2022
+May 23 16:49:38 rbourgea kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-5.18-rc7 root=/dev/sda1 ro
+May 23 16:49:38 rbourgea kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+May 23 16:49:38 rbourgea kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+May 23 16:49:38 rbourgea kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+May 23 16:49:38 rbourgea kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+May 23 16:49:38 rbourgea kernel: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+May 23 16:49:38 rbourgea kernel: [    0.000000] signal: max sigframe size: 1776
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-provided physical RAM map:
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+May 23 16:49:38 rbourgea kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000011fffffff] usable
+May 23 16:49:38 rbourgea kernel: [    0.000000] NX (Execute Disable) protection: active
+May 23 16:49:38 rbourgea kernel: [    0.000000] SMBIOS 2.5 present.
+May 23 16:49:38 rbourgea kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+May 23 16:49:38 rbourgea kernel: [    0.000000] Hypervisor detected: KVM
+May 23 16:49:38 rbourgea kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+May 23 16:49:38 rbourgea kernel: [    0.000002] kvm-clock: using sched offset of 5709348340 cycles
+May 23 16:49:38 rbourgea kernel: [    0.000005] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+May 23 16:49:38 rbourgea kernel: [    0.000008] tsc: Detected 2699.998 MHz processor
+May 23 16:49:38 rbourgea kernel: [    0.001347] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+May 23 16:49:38 rbourgea kernel: [    0.001353] e820: remove [mem 0x000a0000-0x000fffff] usable
+May 23 16:49:38 rbourgea kernel: [    0.001357] last_pfn = 0x120000 max_arch_pfn = 0x400000000
+May 23 16:49:38 rbourgea kernel: [    0.001372] Disabled
+May 23 16:49:38 rbourgea kernel: [    0.001374] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+May 23 16:49:38 rbourgea kernel: [    0.001377] CPU MTRRs all blank - virtualized system.
+May 23 16:49:38 rbourgea kernel: [    0.001379] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+May 23 16:49:38 rbourgea kernel: [    0.001382] last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+May 23 16:49:38 rbourgea kernel: [    0.001435] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+May 23 16:49:38 rbourgea kernel: [    0.003054] ACPI: Early table checksum verification disabled
+May 23 16:49:38 rbourgea kernel: [    0.003061] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+May 23 16:49:38 rbourgea kernel: [    0.003067] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+May 23 16:49:38 rbourgea kernel: [    0.003072] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+May 23 16:49:38 rbourgea kernel: [    0.003078] ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20120111)
+May 23 16:49:38 rbourgea kernel: [    0.003082] ACPI: FACS 0x00000000DFFF0200 000040
+May 23 16:49:38 rbourgea kernel: [    0.003085] ACPI: FACS 0x00000000DFFF0200 000040
+May 23 16:49:38 rbourgea kernel: [    0.003088] ACPI: APIC 0x00000000DFFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+May 23 16:49:38 rbourgea kernel: [    0.003091] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20120111)
+May 23 16:49:38 rbourgea kernel: [    0.003093] ACPI: Reserving FACP table memory at [mem 0xdfff00f0-0xdfff01e3]
+May 23 16:49:38 rbourgea kernel: [    0.003095] ACPI: Reserving DSDT table memory at [mem 0xdfff0470-0xdfff2794]
+May 23 16:49:38 rbourgea kernel: [    0.003096] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+May 23 16:49:38 rbourgea kernel: [    0.003097] ACPI: Reserving FACS table memory at [mem 0xdfff0200-0xdfff023f]
+May 23 16:49:38 rbourgea kernel: [    0.003098] ACPI: Reserving APIC table memory at [mem 0xdfff0240-0xdfff0293]
+May 23 16:49:38 rbourgea kernel: [    0.003099] ACPI: Reserving SSDT table memory at [mem 0xdfff02a0-0xdfff046b]
+May 23 16:49:38 rbourgea kernel: [    0.003354] No NUMA configuration found
+May 23 16:49:38 rbourgea kernel: [    0.003356] Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
+May 23 16:49:38 rbourgea kernel: [    0.003359] NODE_DATA(0) allocated [mem 0x11fff8000-0x11fffbfff]
+May 23 16:49:38 rbourgea kernel: [    0.003374] Zone ranges:
+May 23 16:49:38 rbourgea kernel: [    0.003375]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+May 23 16:49:38 rbourgea kernel: [    0.003377]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+May 23 16:49:38 rbourgea kernel: [    0.003379]   Normal   [mem 0x0000000100000000-0x000000011fffffff]
+May 23 16:49:38 rbourgea kernel: [    0.003380] Movable zone start for each node
+May 23 16:49:38 rbourgea kernel: [    0.003381] Early memory node ranges
+May 23 16:49:38 rbourgea kernel: [    0.003382]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+May 23 16:49:38 rbourgea kernel: [    0.003383]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+May 23 16:49:38 rbourgea kernel: [    0.003385]   node   0: [mem 0x0000000100000000-0x000000011fffffff]
+May 23 16:49:38 rbourgea kernel: [    0.003386] Initmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
+May 23 16:49:38 rbourgea kernel: [    0.004765] On node 0, zone DMA: 1 pages in unavailable ranges
+May 23 16:49:38 rbourgea kernel: [    0.004790] On node 0, zone DMA: 97 pages in unavailable ranges
+May 23 16:49:38 rbourgea kernel: [    0.064440] On node 0, zone Normal: 16 pages in unavailable ranges
+May 23 16:49:38 rbourgea kernel: [    0.065150] ACPI: PM-Timer IO Port: 0x4008
+May 23 16:49:38 rbourgea kernel: [    0.065209] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+May 23 16:49:38 rbourgea kernel: [    0.065213] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+May 23 16:49:38 rbourgea kernel: [    0.065215] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+May 23 16:49:38 rbourgea kernel: [    0.065219] ACPI: Using ACPI (MADT) for SMP configuration information
+May 23 16:49:38 rbourgea kernel: [    0.065225] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+May 23 16:49:38 rbourgea kernel: [    0.065246] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+May 23 16:49:38 rbourgea kernel: [    0.065248] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+May 23 16:49:38 rbourgea kernel: [    0.065249] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+May 23 16:49:38 rbourgea kernel: [    0.065250] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+May 23 16:49:38 rbourgea kernel: [    0.065251] PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+May 23 16:49:38 rbourgea kernel: [    0.065252] PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+May 23 16:49:38 rbourgea kernel: [    0.065253] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+May 23 16:49:38 rbourgea kernel: [    0.065254] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+May 23 16:49:38 rbourgea kernel: [    0.065254] PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+May 23 16:49:38 rbourgea kernel: [    0.065255] PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+May 23 16:49:38 rbourgea kernel: [    0.065256] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+May 23 16:49:38 rbourgea kernel: [    0.065257] [mem 0xe0000000-0xfebfffff] available for PCI devices
+May 23 16:49:38 rbourgea kernel: [    0.065259] Booting paravirtualized kernel on KVM
+May 23 16:49:38 rbourgea kernel: [    0.065262] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+May 23 16:49:38 rbourgea kernel: [    0.070283] setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:1 nr_node_ids:1
+May 23 16:49:38 rbourgea kernel: [    0.071730] percpu: Embedded 52 pages/cpu s176040 r8192 d28760 u2097152
+May 23 16:49:38 rbourgea kernel: [    0.071739] pcpu-alloc: s176040 r8192 d28760 u2097152 alloc=1*2097152
+May 23 16:49:38 rbourgea kernel: [    0.071742] pcpu-alloc: [0] 0 
+May 23 16:49:38 rbourgea kernel: [    0.071762] Fallback order for Node 0: 0 
+May 23 16:49:38 rbourgea kernel: [    0.071765] Built 1 zonelists, mobility grouping on.  Total pages: 1031920
+May 23 16:49:38 rbourgea kernel: [    0.071766] Policy zone: Normal
+May 23 16:49:38 rbourgea kernel: [    0.071768] Kernel command line: BOOT_IMAGE=/vmlinuz-5.18-rc7 root=/dev/sda1 ro
+May 23 16:49:38 rbourgea kernel: [    0.071790] Unknown kernel command line parameters "BOOT_IMAGE=/vmlinuz-5.18-rc7", will be passed to user space.
+May 23 16:49:38 rbourgea kernel: [    0.074638] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.076103] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.076140] mem auto-init: stack:off, heap alloc:off, heap free:off
+May 23 16:49:38 rbourgea kernel: [    0.137173] Memory: 4019800K/4193848K available (16396K kernel code, 2671K rwdata, 5084K rodata, 1276K init, 1216K bss, 173788K reserved, 0K cma-reserved)
+May 23 16:49:38 rbourgea kernel: [    0.137209] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+May 23 16:49:38 rbourgea kernel: [    0.137218] Kernel/User page tables isolation: enabled
+May 23 16:49:38 rbourgea kernel: [    0.138168] Dynamic Preempt: voluntary
+May 23 16:49:38 rbourgea kernel: [    0.139575] rcu: Preemptible hierarchical RCU implementation.
+May 23 16:49:38 rbourgea kernel: [    0.139578] rcu: ^IRCU event tracing is enabled.
+May 23 16:49:38 rbourgea kernel: [    0.139579] rcu: ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=1.
+May 23 16:49:38 rbourgea kernel: [    0.139581] ^ITrampoline variant of Tasks RCU enabled.
+May 23 16:49:38 rbourgea kernel: [    0.139582] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+May 23 16:49:38 rbourgea kernel: [    0.139583] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+May 23 16:49:38 rbourgea kernel: [    0.140619] NR_IRQS: 4352, nr_irqs: 256, preallocated irqs: 16
+May 23 16:49:38 rbourgea kernel: [    0.140915] random: get_random_bytes called from start_kernel+0x493/0x665 with crng_init=0
+May 23 16:49:38 rbourgea kernel: [    0.146165] Console: colour VGA+ 80x25
+May 23 16:49:38 rbourgea kernel: [    0.176109] printk: console [tty0] enabled
+May 23 16:49:38 rbourgea kernel: [    0.176322] ACPI: Core revision 20211217
+May 23 16:49:38 rbourgea kernel: [    0.176668] APIC: Switch to symmetric I/O mode setup
+May 23 16:49:38 rbourgea kernel: [    0.177944] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+May 23 16:49:38 rbourgea kernel: [    0.178206] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x26eb3cc21a9, max_idle_ns: 440795299783 ns
+May 23 16:49:38 rbourgea kernel: [    0.178609] Calibrating delay loop (skipped) preset value.. 5399.99 BogoMIPS (lpj=2699998)
+May 23 16:49:38 rbourgea kernel: [    0.178952] pid_max: default: 32768 minimum: 301
+May 23 16:49:38 rbourgea kernel: [    0.179171] LSM: Security Framework initializing
+May 23 16:49:38 rbourgea kernel: [    0.179382] SELinux:  Initializing.
+May 23 16:49:38 rbourgea kernel: [    0.179590] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.179604] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.179604] process: using mwait in idle threads
+May 23 16:49:38 rbourgea kernel: [    0.179604] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+May 23 16:49:38 rbourgea kernel: [    0.179604] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+May 23 16:49:38 rbourgea kernel: [    0.179604] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+May 23 16:49:38 rbourgea kernel: [    0.179604] Spectre V2 : Mitigation: Retpolines
+May 23 16:49:38 rbourgea kernel: [    0.179604] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+May 23 16:49:38 rbourgea kernel: [    0.179613] Speculative Store Bypass: Vulnerable
+May 23 16:49:38 rbourgea kernel: [    0.179827] SRBDS: Unknown: Dependent on hypervisor status
+May 23 16:49:38 rbourgea kernel: [    0.180056] MDS: Mitigation: Clear CPU buffers
+May 23 16:49:38 rbourgea kernel: [    0.188911] Freeing SMP alternatives memory: 44K
+May 23 16:49:38 rbourgea kernel: [    0.294120] smpboot: CPU0: Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz (family: 0x6, model: 0x3d, stepping: 0x4)
+May 23 16:49:38 rbourgea kernel: [    0.294604] cblist_init_generic: Setting adjustable number of callback queues.
+May 23 16:49:38 rbourgea kernel: [    0.294604] cblist_init_generic: Setting shift to 0 and lim to 1.
+May 23 16:49:38 rbourgea kernel: [    0.294604] Performance Events: unsupported p6 CPU model 61 no PMU driver, software events only.
+May 23 16:49:38 rbourgea kernel: [    0.294604] rcu: Hierarchical SRCU implementation.
+May 23 16:49:38 rbourgea kernel: [    0.294604] smp: Bringing up secondary CPUs ...
+May 23 16:49:38 rbourgea kernel: [    0.294604] smp: Brought up 1 node, 1 CPU
+May 23 16:49:38 rbourgea kernel: [    0.294604] smpboot: Max logical packages: 1
+May 23 16:49:38 rbourgea kernel: [    0.294604] smpboot: Total of 1 processors activated (5399.99 BogoMIPS)
+May 23 16:49:38 rbourgea kernel: [    0.294604] devtmpfs: initialized
+May 23 16:49:38 rbourgea kernel: [    0.294776] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+May 23 16:49:38 rbourgea kernel: [    0.295162] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.295606] PM: RTC time: 14:49:34, date: 2022-05-23
+May 23 16:49:38 rbourgea kernel: [    0.296626] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+May 23 16:49:38 rbourgea kernel: [    0.296965] audit: initializing netlink subsys (disabled)
+May 23 16:49:38 rbourgea kernel: [    0.297300] thermal_sys: Registered thermal governor 'step_wise'
+May 23 16:49:38 rbourgea kernel: [    0.297301] thermal_sys: Registered thermal governor 'user_space'
+May 23 16:49:38 rbourgea kernel: [    0.297563] audit: type=2000 audit(1653317380.903:1): state=initialized audit_enabled=0 res=1
+May 23 16:49:38 rbourgea kernel: [    0.297604] cpuidle: using governor menu
+May 23 16:49:38 rbourgea kernel: [    0.297649] PCI: Using configuration type 1 for base access
+May 23 16:49:38 rbourgea kernel: [    0.300219] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+May 23 16:49:38 rbourgea kernel: [    0.300797] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+May 23 16:49:38 rbourgea kernel: [    0.301333] ACPI: Added _OSI(Module Device)
+May 23 16:49:38 rbourgea kernel: [    0.301604] ACPI: Added _OSI(Processor Device)
+May 23 16:49:38 rbourgea kernel: [    0.301604] ACPI: Added _OSI(3.0 _SCP Extensions)
+May 23 16:49:38 rbourgea kernel: [    0.301604] ACPI: Added _OSI(Processor Aggregator Device)
+May 23 16:49:38 rbourgea kernel: [    0.301604] ACPI: Added _OSI(Linux-Dell-Video)
+May 23 16:49:38 rbourgea kernel: [    0.301621] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+May 23 16:49:38 rbourgea kernel: [    0.301847] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+May 23 16:49:38 rbourgea kernel: [    0.304880] ACPI: 2 ACPI AML tables successfully acquired and loaded
+May 23 16:49:38 rbourgea kernel: [    0.310011] ACPI: Interpreter enabled
+May 23 16:49:38 rbourgea kernel: [    0.310208] ACPI: PM: (supports S0 S5)
+May 23 16:49:38 rbourgea kernel: [    0.310393] ACPI: Using IOAPIC for interrupt routing
+May 23 16:49:38 rbourgea kernel: [    0.310604] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+May 23 16:49:38 rbourgea kernel: [    0.310604] ACPI: Enabled 2 GPEs in block 00 to 07
+May 23 16:49:38 rbourgea kernel: [    0.316809] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+May 23 16:49:38 rbourgea kernel: [    0.317086] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+May 23 16:49:38 rbourgea kernel: [    0.317419] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+May 23 16:49:38 rbourgea kernel: [    0.317604] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+May 23 16:49:38 rbourgea kernel: [    0.317720] PCI host bridge to bus 0000:00
+May 23 16:49:38 rbourgea kernel: [    0.317919] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+May 23 16:49:38 rbourgea kernel: [    0.318178] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+May 23 16:49:38 rbourgea kernel: [    0.318438] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+May 23 16:49:38 rbourgea kernel: [    0.318604] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+May 23 16:49:38 rbourgea kernel: [    0.318604] pci_bus 0000:00: root bus resource [bus 00-ff]
+May 23 16:49:38 rbourgea kernel: [    0.319793] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+May 23 16:49:38 rbourgea kernel: [    0.321643] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+May 23 16:49:38 rbourgea kernel: [    0.323421] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+May 23 16:49:38 rbourgea kernel: [    0.325059] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+May 23 16:49:38 rbourgea kernel: [    0.326005] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+May 23 16:49:38 rbourgea kernel: [    0.326364] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+May 23 16:49:38 rbourgea kernel: [    0.326604] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+May 23 16:49:38 rbourgea kernel: [    0.326604] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+May 23 16:49:38 rbourgea kernel: [    0.327683] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+May 23 16:49:38 rbourgea kernel: [    0.329884] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+May 23 16:49:38 rbourgea kernel: [    0.332849] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe0ffffff pref]
+May 23 16:49:38 rbourgea kernel: [    0.335967] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+May 23 16:49:38 rbourgea kernel: [    0.360845] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+May 23 16:49:38 rbourgea kernel: [    0.362284] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+May 23 16:49:38 rbourgea kernel: [    0.364732] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+May 23 16:49:38 rbourgea kernel: [    0.378631] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+May 23 16:49:38 rbourgea kernel: [    0.417878] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+May 23 16:49:38 rbourgea kernel: [    0.419751] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+May 23 16:49:38 rbourgea kernel: [    0.423642] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+May 23 16:49:38 rbourgea kernel: [    0.426704] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+May 23 16:49:38 rbourgea kernel: [    0.444712] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+May 23 16:49:38 rbourgea kernel: [    0.445932] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+May 23 16:49:38 rbourgea kernel: [    0.446470] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+May 23 16:49:38 rbourgea kernel: [    0.448056] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+May 23 16:49:38 rbourgea kernel: [    0.450731] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+May 23 16:49:38 rbourgea kernel: [    0.472618] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+May 23 16:49:38 rbourgea kernel: [    0.482866] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+May 23 16:49:38 rbourgea kernel: [    0.483225] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+May 23 16:49:38 rbourgea kernel: [    0.483987] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+May 23 16:49:38 rbourgea kernel: [    0.486709] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+May 23 16:49:38 rbourgea kernel: [    0.490628] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+May 23 16:49:38 rbourgea kernel: [    0.493631] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+May 23 16:49:38 rbourgea kernel: [    0.499627] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+May 23 16:49:38 rbourgea kernel: [    0.507631] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+May 23 16:49:38 rbourgea kernel: [    0.515617] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+May 23 16:49:38 rbourgea kernel: [    0.525060] ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+May 23 16:49:38 rbourgea kernel: [    0.530616] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+May 23 16:49:38 rbourgea kernel: [    0.533648] ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+May 23 16:49:38 rbourgea kernel: [    0.535648] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+May 23 16:49:38 rbourgea kernel: [    0.536782] iommu: Default domain type: Translated 
+May 23 16:49:38 rbourgea kernel: [    0.537003] iommu: DMA domain TLB invalidation policy: lazy mode 
+May 23 16:49:38 rbourgea kernel: [    0.537332] SCSI subsystem initialized
+May 23 16:49:38 rbourgea kernel: [    0.537575] libata version 3.00 loaded.
+May 23 16:49:38 rbourgea kernel: [    0.537604] ACPI: bus type USB registered
+May 23 16:49:38 rbourgea kernel: [    0.537604] usbcore: registered new interface driver usbfs
+May 23 16:49:38 rbourgea kernel: [    0.537646] usbcore: registered new interface driver hub
+May 23 16:49:38 rbourgea kernel: [    0.537974] usbcore: registered new device driver usb
+May 23 16:49:38 rbourgea kernel: [    0.538750] pps_core: LinuxPPS API ver. 1 registered
+May 23 16:49:38 rbourgea kernel: [    0.539275] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+May 23 16:49:38 rbourgea kernel: [    0.539689] PTP clock support registered
+May 23 16:49:38 rbourgea kernel: [    0.540735] Advanced Linux Sound Architecture Driver Initialized.
+May 23 16:49:38 rbourgea kernel: [    0.541218] NetLabel: Initializing
+May 23 16:49:38 rbourgea kernel: [    0.541439] NetLabel:  domain hash size = 128
+May 23 16:49:38 rbourgea kernel: [    0.541604] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+May 23 16:49:38 rbourgea kernel: [    0.541651] NetLabel:  unlabeled traffic allowed by default
+May 23 16:49:38 rbourgea kernel: [    0.542060] PCI: Using ACPI for IRQ routing
+May 23 16:49:38 rbourgea kernel: [    0.542301] PCI: pci_cache_line_size set to 64 bytes
+May 23 16:49:38 rbourgea kernel: [    0.544766] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+May 23 16:49:38 rbourgea kernel: [    0.544781] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+May 23 16:49:38 rbourgea kernel: [    0.544905] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+May 23 16:49:38 rbourgea kernel: [    0.545319] pci 0000:00:02.0: vgaarb: bridge control possible
+May 23 16:49:38 rbourgea kernel: [    0.545604] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+May 23 16:49:38 rbourgea kernel: [    0.545604] vgaarb: loaded
+May 23 16:49:38 rbourgea kernel: [    0.545604] clocksource: Switched to clocksource kvm-clock
+May 23 16:49:38 rbourgea kernel: [    0.570702] VFS: Disk quotas dquot_6.6.0
+May 23 16:49:38 rbourgea kernel: [    0.570702] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+May 23 16:49:38 rbourgea kernel: [    0.570702] pnp: PnP ACPI init
+May 23 16:49:38 rbourgea kernel: [    0.706966] pnp: PnP ACPI: found 2 devices
+May 23 16:49:38 rbourgea kernel: [    0.714130] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+May 23 16:49:38 rbourgea kernel: [    0.714527] NET: Registered PF_INET protocol family
+May 23 16:49:38 rbourgea kernel: [    0.714730] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.715655] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.716011] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.716159] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.716159] TCP: Hash tables configured (established 32768 bind 32768)
+May 23 16:49:38 rbourgea kernel: [    0.716159] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.716159] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+May 23 16:49:38 rbourgea kernel: [    0.716159] NET: Registered PF_UNIX/PF_LOCAL protocol family
+May 23 16:49:38 rbourgea kernel: [    0.716159] RPC: Registered named UNIX socket transport module.
+May 23 16:49:38 rbourgea kernel: [    0.716159] RPC: Registered udp transport module.
+May 23 16:49:38 rbourgea kernel: [    0.716159] RPC: Registered tcp transport module.
+May 23 16:49:38 rbourgea kernel: [    0.716159] RPC: Registered tcp NFSv4.1 backchannel transport module.
+May 23 16:49:38 rbourgea kernel: [    0.716159] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+May 23 16:49:38 rbourgea kernel: [    0.716159] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+May 23 16:49:38 rbourgea kernel: [    0.716159] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+May 23 16:49:38 rbourgea kernel: [    0.716159] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+May 23 16:49:38 rbourgea kernel: [    0.720042] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+May 23 16:49:38 rbourgea kernel: [    0.720314] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+May 23 16:49:38 rbourgea kernel: [    0.723750] PCI: CLS 0 bytes, default 64
+May 23 16:49:38 rbourgea kernel: [    0.724003] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+May 23 16:49:38 rbourgea kernel: [    0.724256] software IO TLB: mapped [mem 0x00000000dbff0000-0x00000000dfff0000] (64MB)
+May 23 16:49:38 rbourgea kernel: [    0.724617] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+May 23 16:49:38 rbourgea kernel: [    0.724666] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x26eb3cc21a9, max_idle_ns: 440795299783 ns
+May 23 16:49:38 rbourgea kernel: [    0.724666] clocksource: Switched to clocksource tsc
+May 23 16:49:38 rbourgea kernel: [    0.724666] platform rtc_cmos: registered platform RTC device (no PNP device found)
+May 23 16:49:38 rbourgea kernel: [    0.727591] Initialise system trusted keyrings
+May 23 16:49:38 rbourgea kernel: [    0.727591] workingset: timestamp_bits=56 max_order=20 bucket_order=0
+May 23 16:49:38 rbourgea kernel: [    0.727591] NFS: Registering the id_resolver key type
+May 23 16:49:38 rbourgea kernel: [    0.727591] Key type id_resolver registered
+May 23 16:49:38 rbourgea kernel: [    0.727591] Key type id_legacy registered
+May 23 16:49:38 rbourgea kernel: [    0.727591] 9p: Installing v9fs 9p2000 file system support
+May 23 16:49:38 rbourgea kernel: [    0.741663] Key type asymmetric registered
+May 23 16:49:38 rbourgea kernel: [    0.741964] Asymmetric key parser 'x509' registered
+May 23 16:49:38 rbourgea kernel: [    0.742466] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+May 23 16:49:38 rbourgea kernel: [    0.742613] io scheduler mq-deadline registered
+May 23 16:49:38 rbourgea kernel: [    0.742613] io scheduler kyber registered
+May 23 16:49:38 rbourgea kernel: [    0.744863] ACPI: AC: AC Adapter [AC] (on-line)
+May 23 16:49:38 rbourgea kernel: [    0.745192] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+May 23 16:49:38 rbourgea kernel: [    0.745621] ACPI: button: Power Button [PWRF]
+May 23 16:49:38 rbourgea kernel: [    0.746111] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+May 23 16:49:38 rbourgea kernel: [    0.746485] ACPI: button: Sleep Button [SLPF]
+May 23 16:49:38 rbourgea kernel: [    0.746933] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+May 23 16:49:38 rbourgea kernel: [    0.747435] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+May 23 16:49:38 rbourgea kernel: [    0.750605] ACPI: battery: Slot [BAT0] (battery present)
+May 23 16:49:38 rbourgea kernel: [    0.751059] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+May 23 16:49:38 rbourgea kernel: [    0.751674] Non-volatile memory driver v1.3
+May 23 16:49:38 rbourgea kernel: [    0.751896] Linux agpgart interface v0.103
+May 23 16:49:38 rbourgea kernel: [    0.752325] ACPI: bus type drm_connector registered
+May 23 16:49:38 rbourgea kernel: [    0.753648] loop: module loaded
+May 23 16:49:38 rbourgea kernel: [    0.753892] ahci 0000:00:0d.0: version 3.0
+May 23 16:49:38 rbourgea kernel: [    0.754836] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+May 23 16:49:38 rbourgea kernel: [    0.755648] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 3 ports 3 Gbps 0x7 impl SATA mode
+May 23 16:49:38 rbourgea kernel: [    0.756129] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+May 23 16:49:38 rbourgea kernel: [    0.764145] scsi host0: ahci
+May 23 16:49:38 rbourgea kernel: [    0.764257] scsi host1: ahci
+May 23 16:49:38 rbourgea kernel: [    0.764257] scsi host2: ahci
+May 23 16:49:38 rbourgea kernel: [    0.770272] ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+May 23 16:49:38 rbourgea kernel: [    0.770764] ata2: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806180 irq 21
+May 23 16:49:38 rbourgea kernel: [    0.771090] ata3: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806200 irq 21
+May 23 16:49:38 rbourgea kernel: [    0.771657] ata_piix 0000:00:01.1: version 2.13
+May 23 16:49:38 rbourgea kernel: [    0.772138] scsi host3: ata_piix
+May 23 16:49:38 rbourgea kernel: [    0.772384] scsi host4: ata_piix
+May 23 16:49:38 rbourgea kernel: [    0.772578] ata4: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+May 23 16:49:38 rbourgea kernel: [    0.772714] ata5: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+May 23 16:49:38 rbourgea kernel: [    0.772714] e100: Intel(R) PRO/100 Network Driver
+May 23 16:49:38 rbourgea kernel: [    0.772714] e100: Copyright(c) 1999-2006 Intel Corporation
+May 23 16:49:38 rbourgea kernel: [    0.772714] e1000: Intel(R) PRO/1000 Network Driver
+May 23 16:49:38 rbourgea kernel: [    0.772714] e1000: Copyright (c) 1999-2006 Intel Corporation.
+May 23 16:49:38 rbourgea kernel: [    0.943109] ata5.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+May 23 16:49:38 rbourgea kernel: [    1.080885] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+May 23 16:49:38 rbourgea kernel: [    1.081390] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+May 23 16:49:38 rbourgea kernel: [    1.081627] ata1.00: 31457280 sectors, multi 128: LBA48 NCQ (depth 32)
+May 23 16:49:38 rbourgea kernel: [    1.087349] ata1.00: configured for UDMA/133
+May 23 16:49:38 rbourgea kernel: [    1.087630] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+May 23 16:49:38 rbourgea kernel: [    1.088182] scsi 0:0:0:0: Attached scsi generic sg0 type 0
+May 23 16:49:38 rbourgea kernel: [    1.088567] sd 0:0:0:0: [sda] 31457280 512-byte logical blocks: (16.1 GB/15.0 GiB)
+May 23 16:49:38 rbourgea kernel: [    1.088900] sd 0:0:0:0: [sda] Write Protect is off
+May 23 16:49:38 rbourgea kernel: [    1.089149] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+May 23 16:49:38 rbourgea kernel: [    1.089163] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+May 23 16:49:38 rbourgea kernel: [    1.094984]  sda: sda1 sda2 sda3
+May 23 16:49:38 rbourgea kernel: [    1.095671] sd 0:0:0:0: [sda] Attached SCSI disk
+May 23 16:49:38 rbourgea kernel: [    1.244717] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:ea:c8:43
+May 23 16:49:38 rbourgea kernel: [    1.244717] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+May 23 16:49:38 rbourgea kernel: [    1.244717] e1000e: Intel(R) PRO/1000 Network Driver
+May 23 16:49:38 rbourgea kernel: [    1.244717] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+May 23 16:49:38 rbourgea kernel: [    1.244717] sky2: driver version 1.30
+May 23 16:49:38 rbourgea kernel: [    1.244717] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+May 23 16:49:38 rbourgea kernel: [    1.244717] ehci-pci: EHCI PCI platform driver
+May 23 16:49:38 rbourgea kernel: [    1.244717] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+May 23 16:49:38 rbourgea kernel: [    1.244717] ohci-pci: OHCI PCI platform driver
+May 23 16:49:38 rbourgea kernel: [    1.248030] ohci-pci 0000:00:06.0: OHCI PCI host controller
+May 23 16:49:38 rbourgea kernel: [    1.248293] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+May 23 16:49:38 rbourgea kernel: [    1.248665] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+May 23 16:49:38 rbourgea kernel: [    1.302331] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.18
+May 23 16:49:38 rbourgea kernel: [    1.303363] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+May 23 16:49:38 rbourgea kernel: [    1.304399] usb usb1: Product: OHCI PCI host controller
+May 23 16:49:38 rbourgea kernel: [    1.305057] usb usb1: Manufacturer: Linux 5.18.0-rc7 ohci_hcd
+May 23 16:49:38 rbourgea kernel: [    1.305298] usb usb1: SerialNumber: 0000:00:06.0
+May 23 16:49:38 rbourgea kernel: [    1.306019] hub 1-0:1.0: USB hub found
+May 23 16:49:38 rbourgea kernel: [    1.306228] hub 1-0:1.0: 12 ports detected
+May 23 16:49:38 rbourgea kernel: [    1.307186] uhci_hcd: USB Universal Host Controller Interface driver
+May 23 16:49:38 rbourgea kernel: [    1.307515] usbcore: registered new interface driver usblp
+May 23 16:49:38 rbourgea kernel: [    1.307634] usbcore: registered new interface driver usb-storage
+May 23 16:49:38 rbourgea kernel: [    1.307634] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+May 23 16:49:38 rbourgea kernel: [    1.309067] serio: i8042 KBD port at 0x60,0x64 irq 1
+May 23 16:49:38 rbourgea kernel: [    1.309336] serio: i8042 AUX port at 0x60,0x64 irq 12
+May 23 16:49:38 rbourgea kernel: [    1.310138] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+May 23 16:49:38 rbourgea kernel: [    1.311968] rtc_cmos rtc_cmos: registered as rtc0
+May 23 16:49:38 rbourgea kernel: [    1.312255] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+May 23 16:49:38 rbourgea kernel: [    1.312552] fail to initialize ptp_kvm
+May 23 16:49:38 rbourgea kernel: [    1.312614] device-mapper: ioctl: 4.46.0-ioctl (2022-02-22) initialised: dm-devel@redhat.com
+May 23 16:49:38 rbourgea kernel: [    1.313382] intel_pstate: CPU model not supported
+May 23 16:49:38 rbourgea kernel: [    1.313754] hid: raw HID events driver (C) Jiri Kosina
+May 23 16:49:38 rbourgea kernel: [    1.314304] usbcore: registered new interface driver usbhid
+May 23 16:49:38 rbourgea kernel: [    1.314540] usbhid: USB HID core driver
+May 23 16:49:38 rbourgea kernel: [    1.319000] Initializing XFRM netlink socket
+May 23 16:49:38 rbourgea kernel: [    1.319626] NET: Registered PF_INET6 protocol family
+May 23 16:49:38 rbourgea kernel: [    1.321217] Segment Routing with IPv6
+May 23 16:49:38 rbourgea kernel: [    1.321585] In-situ OAM (IOAM) with IPv6
+May 23 16:49:38 rbourgea kernel: [    1.321934] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+May 23 16:49:38 rbourgea kernel: [    1.322412] NET: Registered PF_PACKET protocol family
+May 23 16:49:38 rbourgea kernel: [    1.323085] 9pnet: Installing 9P2000 support
+May 23 16:49:38 rbourgea kernel: [    1.324072] Key type dns_resolver registered
+May 23 16:49:38 rbourgea kernel: [    1.324602] IPI shorthand broadcast: enabled
+May 23 16:49:38 rbourgea kernel: [    1.324924] sched_clock: Marking stable (1286295330, 37706137)->(1357547374, -33545907)
+May 23 16:49:38 rbourgea kernel: [    1.325612] registered taskstats version 1
+May 23 16:49:38 rbourgea kernel: [    1.325939] Loading compiled-in X.509 certificates
+May 23 16:49:38 rbourgea kernel: [    1.326500] cryptomgr_test (52) used greatest stack depth: 15368 bytes left
+May 23 16:49:38 rbourgea kernel: [    1.327929] PM:   Magic number: 6:993:839
+May 23 16:49:38 rbourgea kernel: [    1.328202] printk: console [netcon0] enabled
+May 23 16:49:38 rbourgea kernel: [    1.328413] netconsole: network logging started
+May 23 16:49:38 rbourgea kernel: [    1.328714] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+May 23 16:49:38 rbourgea kernel: [    1.329282] kworker/u2:6 (74) used greatest stack depth: 14736 bytes left
+May 23 16:49:38 rbourgea kernel: [    1.329871] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+May 23 16:49:38 rbourgea kernel: [    1.330316] ALSA device list:
+May 23 16:49:38 rbourgea kernel: [    1.330484]   No soundcards found.
+May 23 16:49:38 rbourgea kernel: [    1.330728] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+May 23 16:49:38 rbourgea kernel: [    1.331078] cfg80211: failed to load regulatory.db
+May 23 16:49:38 rbourgea kernel: [    1.404952] ata2: SATA link down (SStatus 0 SControl 300)
+May 23 16:49:38 rbourgea kernel: [    1.516646] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+May 23 16:49:38 rbourgea kernel: [    1.600525] usb 1-1: new full-speed USB device number 2 using ohci-pci
+May 23 16:49:38 rbourgea kernel: [    1.717132] ata3: SATA link down (SStatus 0 SControl 300)
+May 23 16:49:38 rbourgea kernel: [    1.717731] scsi 4:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+May 23 16:49:38 rbourgea kernel: [    1.734364] sr 4:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+May 23 16:49:38 rbourgea kernel: [    1.734643] cdrom: Uniform CD-ROM driver Revision: 3.20
+May 23 16:49:38 rbourgea kernel: [    1.749263] sr 4:0:0:0: Attached scsi CD-ROM sr0
+May 23 16:49:38 rbourgea kernel: [    1.749303] sr 4:0:0:0: Attached scsi generic sg1 type 5
+May 23 16:49:38 rbourgea kernel: [    1.749564] md: Waiting for all devices to be available before autodetect
+May 23 16:49:38 rbourgea kernel: [    1.749825] md: If you don't use raid, use raid=noautodetect
+May 23 16:49:38 rbourgea kernel: [    1.750191] md: Autodetecting RAID arrays.
+May 23 16:49:38 rbourgea kernel: [    1.750460] md: autorun ...
+May 23 16:49:38 rbourgea kernel: [    1.750690] md: ... autorun DONE.
+May 23 16:49:38 rbourgea kernel: [    1.756809] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
+May 23 16:49:38 rbourgea kernel: [    1.757148] EXT4-fs (sda1): write access will be enabled during recovery
+May 23 16:49:38 rbourgea kernel: [    1.763777] random: fast init done
+May 23 16:49:38 rbourgea kernel: [    1.862859] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+May 23 16:49:38 rbourgea kernel: [    1.863275] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+May 23 16:49:38 rbourgea kernel: [    1.863545] usb 1-1: Product: USB Tablet
+May 23 16:49:38 rbourgea kernel: [    1.863731] usb 1-1: Manufacturer: VirtualBox
+May 23 16:49:38 rbourgea kernel: [    1.876218] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+May 23 16:49:38 rbourgea kernel: [    1.876756] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+May 23 16:49:38 rbourgea kernel: [    2.198648] EXT4-fs (sda1): recovery complete
+May 23 16:49:38 rbourgea kernel: [    2.199944] EXT4-fs (sda1): mounted filesystem with ordered data mode. Quota mode: none.
+May 23 16:49:38 rbourgea kernel: [    2.200314] VFS: Mounted root (ext4 filesystem) readonly on device 8:1.
+May 23 16:49:38 rbourgea kernel: [    2.201498] devtmpfs: mounted
+May 23 16:49:38 rbourgea kernel: [    2.201888] Freeing unused kernel image (initmem) memory: 1276K
+May 23 16:49:38 rbourgea kernel: [    2.202140] Write protecting the kernel read-only data: 24576k
+May 23 16:49:38 rbourgea kernel: [    2.202814] Freeing unused kernel image (text/rodata gap) memory: 2032K
+May 23 16:49:38 rbourgea kernel: [    2.203254] Freeing unused kernel image (rodata/data gap) memory: 1060K
+May 23 16:49:38 rbourgea kernel: [    2.203523] Run /sbin/init as init process
+May 23 16:49:38 rbourgea kernel: [    2.203716]   with arguments:
+May 23 16:49:38 rbourgea kernel: [    2.203716]     /sbin/init
+May 23 16:49:38 rbourgea kernel: [    2.203717]   with environment:
+May 23 16:49:38 rbourgea kernel: [    2.203717]     HOME=/
+May 23 16:49:38 rbourgea kernel: [    2.203718]     TERM=linux
+May 23 16:49:38 rbourgea kernel: [    2.203718]     BOOT_IMAGE=/vmlinuz-5.18-rc7
+May 23 16:49:38 rbourgea kernel: [    2.278742] stty (84) used greatest stack depth: 13680 bytes left
+May 23 16:49:38 rbourgea kernel: [    2.296967] dmesg (85) used greatest stack depth: 13608 bytes left
+May 23 16:49:38 rbourgea kernel: [    2.341411] mount (91) used greatest stack depth: 13496 bytes left
+May 23 16:49:38 rbourgea kernel: [    2.477846] ip (136) used greatest stack depth: 12336 bytes left
+May 23 16:49:38 rbourgea kernel: <30>[    2.545375] udevd[161]: starting version 3.2.11
+May 23 16:49:38 rbourgea kernel: [    2.935509] random: crng init done
+May 23 16:49:38 rbourgea kernel: <30>[    2.951741] udevd[162]: starting eudev-3.2.11
+May 23 16:49:38 rbourgea kernel: [    3.608065] Adding 204796k swap on /dev/sda2.  Priority:1 extents:1 across:204796k 
+May 23 16:49:38 rbourgea kernel: [    3.622248] EXT4-fs (sda1): re-mounted. Quota mode: none.
+May 23 16:49:38 rbourgea kernel: [    3.692292] EXT4-fs (sda1): re-mounted. Quota mode: none.
+May 23 16:49:38 rbourgea kernel: [    3.743512] EXT4-fs (sda3): recovery complete
+May 23 16:49:38 rbourgea kernel: [    3.744335] EXT4-fs (sda3): mounted filesystem with ordered data mode. Quota mode: none.
+May 23 16:49:38 rbourgea kernel: [    4.655052] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+May 23 16:49:38 rbourgea kernel: [    4.656189] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
