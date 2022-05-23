@@ -1345,3 +1345,39 @@ May 23 15:58:04 +02:00 rbourgea  Bringing up the eth0 interface... OK
 May 23 15:58:04 +02:00 rbourgea  Starting dhcpcd on the eth0 interface... OK
 May 23 15:58:04 +02:00 rbourgea  Starting SSH Server... OK
 --------
+May 23 16:49:42 +02:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+May 23 16:49:43 +02:00 (none)  Bringing up the loopback interface... OK
+May 23 16:49:43 +02:00 (none)  Setting hostname to rbourgea... OK
+May 23 16:49:43 +02:00 rbourgea  Populating /dev with device nodes...  OK
+May 23 16:49:37 +02:00 rbourgea  Activating all swap files/partitions... OK
+May 23 16:49:37 +02:00 rbourgea  Mounting root file system in read-only mode...  OK
+May 23 16:49:37 +02:00 rbourgea  Checking file systems... OK
+May 23 16:49:37 +02:00 rbourgea  Remounting root file system in read-write mode... OK
+May 23 16:49:37 +02:00 rbourgea  Mounting remaining file systems... OK
+May 23 16:49:37 +02:00 rbourgea  Cleaning file systems: /tmp OK
+May 23 16:49:37 +02:00 rbourgea  Retrying failed uevents, if any... OK
+May 23 16:49:38 +02:00 rbourgea  Setting up Linux console... OK
+May 23 16:49:38 +02:00 rbourgea  Starting system log daemon... OK
+May 23 16:49:38 +02:00 rbourgea  Starting kernel log daemon... OK
+May 23 16:49:38 +02:00 rbourgea  Bringing up the eth0 interface... OK
+May 23 16:49:38 +02:00 rbourgea  Starting dhcpcd on the eth0 interface... OK
+May 23 16:49:38 +02:00 rbourgea  Starting SSH Server... OK
+--------
+May 23 17:06:13 +02:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+May 23 17:06:13 +02:00 (none)  Bringing up the loopback interface... OK
+May 23 17:06:13 +02:00 (none)  Setting hostname to rbourgea... OK
+May 23 17:06:13 +02:00 rbourgea  Populating /dev with device nodes...  OK
+May 23 17:06:07 +02:00 rbourgea  Activating all swap files/partitions... OK
+May 23 17:06:07 +02:00 rbourgea  Mounting root file system in read-only mode...  OK
+May 23 17:06:07 +02:00 rbourgea  Checking file systems... OK
+May 23 17:06:07 +02:00 rbourgea  Remounting root file system in read-write mode... OK
+May 23 17:06:07 +02:00 rbourgea  Mounting remaining file systems... OK
+May 23 17:06:07 +02:00 rbourgea  Cleaning file systems: /tmp OK
+May 23 17:06:07 +02:00 rbourgea  Retrying failed uevents, if any... OK
+May 23 17:06:08 +02:00 rbourgea  Setting up Linux console... OK
+May 23 17:06:08 +02:00 rbourgea  Starting system log daemon... OK
+May 23 17:06:08 +02:00 rbourgea  Starting kernel log daemon... OK
+May 23 17:06:08 +02:00 rbourgea  Bringing up the eth0 interface... OK
+May 23 17:06:08 +02:00 rbourgea  Starting dhcpcd on the eth0 interface... OK
+May 23 17:06:08 +02:00 rbourgea  Starting SSH Server... OK
+--------
