@@ -1,0 +1,11 @@
+--- Makefile.old	2022-05-16 03:08:58.000000000 +0200
++++ Makefile	2022-05-23 16:40:14.995875152 +0200
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 18
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc7
++EXTRAVERSION = -thor_kernel
+ NAME = Superb Owl
+ 
+ # *DOCUMENTATION*
