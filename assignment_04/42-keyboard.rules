@@ -1,0 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    42-keyboard.rules                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/24 15:56:10 by rbourgea          #+#    #+#              #
+#    Updated: 2022/05/24 16:17:40 by rbourgea         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# ACTION=="add"     => 
+# KERNEL==""        => not recommanded
+# SUBSYSTEM=="usb"  => specify entry
+# RUN+="..."        => bash command
+
+# System Path: /usr/lib/udev/rules/ or
+# Custom Path: /etc/udev/rules.d/
+
+# Good Tuto: https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux
+
+ACTION=="add" \
+, SUBSYSTEM=="usb" \
+, RUN+="/sbin/insmod /root/little-penguin-1/assignment_04/main.ko"
