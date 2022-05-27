@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:58:36 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/26 15:24:47 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/27 12:38:43 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ MODULE_AUTHOR("Raphaël Bourgeat <rbourgea@student.42.fr>");
 MODULE_DESCRIPTION("A simple Linux module.");
 MODULE_VERSION("1.0");
 
-static ssize_t etx_misc_write(struct file *file, const char __user *buf,
-		size_t len, loff_t *ppos)
+static ssize_t etx_misc_read(struct file *filp, char __user *buf,
+		size_t count, loff_t *f_pos)
 {
 	pr_info("EtX misc device write\n");
 
@@ -36,8 +36,8 @@ static ssize_t etx_misc_write(struct file *file, const char __user *buf,
 					strlen(LOGIN));
 }
  
-static ssize_t etx_misc_read(struct file *filp, char __user *buf,
-		size_t count, loff_t *f_pos)
+static ssize_t etx_misc_write(struct file *file, const char __user *buf,
+		size_t len, loff_t *ppos)
 {
 	pr_info("EtX misc device read\n");
 
