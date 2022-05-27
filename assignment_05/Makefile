@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-MODULE_NAME = login_misc_device_driver
+MODULE_NAME = fortytwo
 
 obj-m += $(MODULE_NAME).o
 
