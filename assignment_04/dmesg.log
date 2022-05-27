@@ -1,0 +1,21 @@
+[ 1549.179779] usb 1-2: new full-speed USB device number 5 using ohci-pci
+[ 1549.414254] usb 1-2: config 1 interface 0 altsetting 0 endpoint 0x2 has invalid maxpacket 512, setting to 64
+[ 1549.414702] usb 1-2: config 1 interface 0 altsetting 0 endpoint 0x82 has invalid maxpacket 512, setting to 64
+[ 1549.434014] usb 1-2: New USB device found, idVendor=8003, idProduct=2aab, bcdDevice= 1.00
+[ 1549.434571] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 1549.435047] usb 1-2: Product: iBRIDGE
+[ 1549.435258] usb 1-2: Manufacturer: Leef
+[ 1549.435470] usb 1-2: SerialNumber: 1230000000000628
+[ 1549.440397] usb-storage 1-2:1.0: USB Mass Storage device detected
+[ 1549.441479] scsi host5: usb-storage 1-2:1.0
+[ 1549.443410] Hello, World !
+[ 1550.523000] scsi 5:0:0:0: Direct-Access     Leef     iBRIDGE          1.00 PQ: 0 ANSI: 2
+[ 1550.525949] sd 5:0:0:0: Attached scsi generic sg2 type 0
+[ 1550.540393] sd 5:0:0:0: [sdb] 123478016 512-byte logical blocks: (63.2 GB/58.9 GiB)
+[ 1550.549199] sd 5:0:0:0: [sdb] Write Protect is off
+[ 1550.549540] sd 5:0:0:0: [sdb] Mode Sense: 03 00 00 00
+[ 1550.563766] sd 5:0:0:0: [sdb] No Caching mode page found
+[ 1550.564163] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1550.686132]  sdb: sdb1
+[ 1550.767669] sd 5:0:0:0: [sdb] Attached SCSI removable disk
+
