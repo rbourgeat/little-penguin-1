@@ -27,22 +27,22 @@ MODULE_AUTHOR("Raphaël Bourgeat <rbourgea@student.42.fr>");
 MODULE_DESCRIPTION("A simple Linux module.");
 MODULE_VERSION("1.0");
 
-static ssize_t etx_misc_read(struct file *filp, char __user *buf,
+static ssize_t fortytwo_misc_read(struct file *filp, char __user *buf,
 		size_t count, loff_t *f_pos)
 {
-	pr_info("EtX misc device write\n");
+	pr_info("fortytwo misc device read\n");
 
 	return simple_read_from_buffer(buf, count, f_pos, LOGIN,
 					strlen(LOGIN));
 }
  
-static ssize_t etx_misc_write(struct file *file, const char __user *buf,
-		size_t len, loff_t *ppos)
+static ssize_t fortytwo_misc_write(struct file *file, const char __user *buf,
+		size_t count, loff_t *f_pos)
 {
-	pr_info("EtX misc device read\n");
-
-	char specified_msg[count];
+	char specified_msg[8];
 	ssize_t retval = -EINVAL;
+
+	pr_info("fortytwo misc device write\n");
 
 	if (count != strlen(LOGIN))
                 return retval;
@@ -51,15 +51,15 @@ static ssize_t etx_misc_write(struct file *file, const char __user *buf,
 					count);
 	if (retval < 0)
 		return retval;
-
+	
 	retval = strncmp(LOGIN, specified_msg, count) ? -EINVAL : count;
 	return retval;
 }
 
 static const struct file_operations fops = {
 	.owner          = THIS_MODULE,
-	.write          = etx_misc_write,
-	.read           = etx_misc_read,
+	.write          = fortytwo_misc_write,
+	.read           = fortytwo_misc_read,
 	// .open           = etx_misc_open,
 	// .release        = etx_misc_close,
 	// .llseek         = no_llseek,
@@ -73,9 +73,9 @@ struct miscdevice fortytwo_misc_device = {
 
 static int __init misc_init(void)
 {
-	pr_debug("Hello there\nMy minor number is: %i\n",
-                        misc_example.minor);
 	int error;
+	pr_debug("Hello there\nMy minor number is: %i\n",
+                        fortytwo_misc_device.minor);
 
 	error = misc_register(&fortytwo_misc_device);
 	if (error) {
