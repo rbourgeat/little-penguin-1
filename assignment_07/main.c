@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 16:07:48 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/27 16:36:34 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:00:13 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static ssize_t id_read(struct file *file, char __user *buf,
 			size_t count, loff_t *f_pos)
 {
 	pr_info("fortytwo misc device read\n");
-
 	return simple_read_from_buffer(buf, count, f_pos, LOGIN,
 					strlen(LOGIN));
 }
@@ -50,10 +49,8 @@ static ssize_t id_write(struct file *file, const char __user *buf,
 	ssize_t retval = -EINVAL;
 
 	pr_info("fortytwo misc device write\n");
-
 	if (count != strlen(LOGIN))
 		return retval;
-
 	retval = simple_write_to_buffer(specified_msg, count, f_pos, buf,
 					count);
 	if (retval < 0)
@@ -69,9 +66,7 @@ static ssize_t jiffies_read(struct file *file, char __user *to, size_t count,
 	char result[11];
 
 	memset(result, 0, sizeof(result));
-
 	snprintf(result, 11, "%ld", jiffies);
-
 	return simple_read_from_buffer(to, count, f_pos, result, sizeof(result));
 }
 
@@ -134,18 +129,15 @@ static int __init lkm_hello_init(void)
 		printk(KERN_ERR "CONFIG_DEBUG_FS not set\n");
 		return -ENODEV;
 	}
-
 	debugfs_create_file("id", 0666, fortytwo, NULL, &id_fops);
 	debugfs_create_file("jiffies", 0444, fortytwo, NULL, &jiffies_fops);
 	debugfs_create_file("foo", 0644, fortytwo, NULL, &foo_fops);
-
 	return 0;
 }
 
 static void __exit lkm_hello_exit(void)
 {
 	printk(KERN_INFO "Cleaning up module.\n");
-
 	debugfs_remove_recursive(fortytwo);
 }
 

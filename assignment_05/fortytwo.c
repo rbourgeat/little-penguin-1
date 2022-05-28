@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:58:36 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/27 16:04:54 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:00:33 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ static ssize_t fortytwo_misc_read(struct file *filp, char __user *buf,
 		size_t count, loff_t *f_pos)
 {
 	pr_info("fortytwo misc device read\n");
-
 	return simple_read_from_buffer(buf, count, f_pos, LOGIN,
 					strlen(LOGIN));
 }
@@ -43,15 +42,12 @@ static ssize_t fortytwo_misc_write(struct file *file, const char __user *buf,
 	ssize_t retval = -EINVAL;
 
 	pr_info("fortytwo misc device write\n");
-
 	if (count != strlen(LOGIN))
 		return retval;
-
 	retval = simple_write_to_buffer(specified_msg, count, f_pos, buf,
 					count);
 	if (retval < 0)
 		return retval;
-	
 	retval = strncmp(LOGIN, specified_msg, count) ? -EINVAL : count;
 	return retval;
 }
@@ -76,13 +72,11 @@ static int __init misc_init(void)
 	int error;
 	pr_debug("Hello there\nMy minor number is: %i\n",
 			fortytwo_misc_device.minor);
-
 	error = misc_register(&fortytwo_misc_device);
 	if (error) {
 		pr_err("misc_register failed!!!\n");
 		return error;
 	}
-
 	pr_info("misc_register init done!!!\n");
 	return 0;
 }
