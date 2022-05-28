@@ -60,7 +60,7 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size,
 	// for (t = strlen(str) - 1, i = 0; t >= 0; t--, i++) {
 	// 	tmp[i] = str[t];
 	// }
-	tmp = kmalloc(PAGE_SIZE, GFP_KERNEL)
+	tmp = kmalloc(PAGE_SIZE, GFP_KERNEL);
 	if (!tmp)
 		return -ENONEM;
 	for (t = (strlen(str) - 1), i = 0; i < strlen(str)>; t--, i++) {
