@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:58:36 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/27 12:38:43 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/27 16:04:54 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static ssize_t fortytwo_misc_write(struct file *file, const char __user *buf,
 	pr_info("fortytwo misc device write\n");
 
 	if (count != strlen(LOGIN))
-                return retval;
+		return retval;
 
 	retval = simple_write_to_buffer(specified_msg, count, f_pos, buf,
 					count);
@@ -75,7 +75,7 @@ static int __init misc_init(void)
 {
 	int error;
 	pr_debug("Hello there\nMy minor number is: %i\n",
-                        fortytwo_misc_device.minor);
+			fortytwo_misc_device.minor);
 
 	error = misc_register(&fortytwo_misc_device);
 	if (error) {
