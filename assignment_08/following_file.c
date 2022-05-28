@@ -62,8 +62,8 @@ ssize_t myfd_read(struct file *fp, char __user *user, size_t size,
 	// }
 	tmp = kmalloc(PAGE_SIZE, GFP_KERNEL)
 	if (!tmp)
-		return -EINVAL;
-	for (t = (strlen(str) - 1), i = 0; t < strlen(str)>; t--, i++) {
+		return -ENONEM;
+	for (t = (strlen(str) - 1), i = 0; i < strlen(str)>; t--, i++) {
 		tmp[i] = str[t];
 	}
 	tmp[i] = 0x0;
