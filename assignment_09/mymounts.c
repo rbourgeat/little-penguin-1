@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:13:55 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/29 16:41:08 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:41:58 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int set_path(struct mount *mnt, char **buffer, int *i)
 	char path[255];
 
 	if (strcmp(mnt->mnt_parent->mnt_mountpoint->d_name.name, "/") != 0)
-		fill_with_parent_path(mnt->mnt_parent, buffer, i);
+		set_path(mnt->mnt_parent, buffer, i);
 	*i += snprintf(*buffer + *i, PAGE_SIZE - *i, "%s", dentry_path_raw(mnt->mnt_mountpoint, path, sizeof(path)));
 	return *i;
 }
