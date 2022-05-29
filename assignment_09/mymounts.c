@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:13:55 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/29 16:32:50 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:41:08 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 #include <linux/proc_fs.h>
 #include <linux/nsproxy.h>
 #include <linux/slab.h>
+#include <../fs/mount.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Raphaël Bourgeat <rbourgea@student.42.fr>");
