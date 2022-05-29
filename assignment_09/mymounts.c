@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:13:55 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/29 17:14:18 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/29 17:19:53 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Raphaël Bourgeat <rbourgea@student.42.fr>");
-MODULE_DESCRIPTION("A simple debugfs module.");
+MODULE_DESCRIPTION("A listing mount points module.");
 MODULE_VERSION("1.0");
 
 static struct proc_dir_entry *mymounts;
 
 static int set_path(struct mount *mnt, char **buffer, int *i)
 {
-	char path[255];
+	char path[256];
 
 	if (strcmp(mnt->mnt_parent->mnt_mountpoint->d_name.name, "/") != 0)
 		set_path(mnt->mnt_parent, buffer, i);
@@ -53,7 +53,7 @@ static ssize_t mymounts_read(struct file *file, char __user *buf, size_t count,
 {
 	char *buffer;
 	struct mount *mnt;
-	char path[255];
+	char path[256];
 	int ret = 0;
 	int i = 0;
 
