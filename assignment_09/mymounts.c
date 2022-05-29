@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:13:55 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/29 16:25:30 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/29 16:32:50 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 // https://www.kernel.org/doc/htmldocs/kernel-api/API-list-for-each-entry.html
 // https://www.kernel.org/doc/htmldocs/kernel-api/API-snprintf.html
 // https://elixir.bootlin.com/linux/v5.0/ident/dentry_path_raw
-// https://elixir.bootlin.com/linux/v5.0/source/fs/mount.h#L34
+// https://elixir.bootlin.com/linux/v5.0/source/fs/mount.h#L34 <== struct
+// https://elixir.bootlin.com/linux/latest/source/include/linux/nsproxy.h#L31 <== namespace
 
 #include <linux/module.h>
 #include <linux/kernel.h>
@@ -26,6 +27,8 @@
 
 #include <linux/mount.h>
 #include <linux/proc_fs.h>
+#include <linux/nsproxy.h>
+#include <linux/slab.h>
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Raphaël Bourgeat <rbourgea@student.42.fr>");
@@ -56,6 +59,7 @@ static ssize_t mymounts_read(struct file *file, char __user *buf, size_t count,
 	buffer = kmalloc(PAGE_SIZE, GFP_KERNEL);
 	if (!buffer)
 		return -ENOMEM;
+	// get all mountpoints / checking all dentries of a system
 	list_for_each_entry(mnt, &current->nsproxy->mnt_ns->list, mnt_list) {
 	if (strcmp(mnt->mnt_devname, "none") == 0)
 		continue;
@@ -80,7 +84,7 @@ static ssize_t mymounts_read(struct file *file, char __user *buf, size_t count,
 	i += snprintf((&(buffer[i])), PAGE_SIZE - i, "%s\n", \
 		dentry_path_raw(mnt->mnt_mountpoint, path, sizeof(path)));
 	}
-	ret = simple_read_from_buffer(to, count, ppos, buffer, strlen(buffer));
+	ret = simple_read_from_buffer(buf, count, f_pos, buffer, strlen(buffer));
 	kfree(buffer);
 	return ret;
 }
