@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:13:55 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/29 17:41:31 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/29 17:46:26 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,6 @@ static ssize_t mymounts_read(struct file *file, char __user *buf, size_t count,
 	list_for_each_entry(mnt, &current->nsproxy->mnt_ns->list, mnt_list) {
 	if (strcmp(mnt->mnt_devname, "none") == 0)
 		continue;
-	if (strcmp(mnt->mnt_mountpoint->d_name.name, "/") == 0)
-		continue;
 	// pr_info("[%s]", mnt->mnt_devname);
 	// pr_info("[%s]", mnt->mnt_mountpoint->d_name.name);
 	memset(path, 0, sizeof(path));
@@ -74,10 +72,11 @@ static ssize_t mymounts_read(struct file *file, char __user *buf, size_t count,
 		i += snprintf((&(buffer[i])), PAGE_SIZE - i, "%-8s", "root");
 	}
 	else if (strcmp(mnt->mnt_mountpoint->d_name.name, "/") == 0) {
-		i += snprintf((&(buffer[i])), PAGE_SIZE - i, "%s%-*s", \
-			mnt->mnt_parent->mnt_mountpoint->d_name.name, \
-			(int)(8 - strlen(mnt->mnt_parent->mnt_mountpoint->d_name.name)), \
-			mnt->mnt_mountpoint->d_name.name);
+		// i += snprintf((&(buffer[i])), PAGE_SIZE - i, "%s%-*s", \
+		// 	mnt->mnt_parent->mnt_mountpoint->d_name.name, \
+		// 	(int)(8 - strlen(mnt->mnt_parent->mnt_mountpoint->d_name.name)), \
+		// 	mnt->mnt_mountpoint->d_name.name);
+		continue;
 	}
 	else {
 		i += snprintf((&(buffer[i])), PAGE_SIZE - i, "%-8s", mnt->mnt_mountpoint->d_name.name);
