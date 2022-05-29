@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:13:55 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/29 17:30:16 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/29 17:31:48 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,7 @@ static ssize_t mymounts_read(struct file *file, char __user *buf, size_t count,
 	list_for_each_entry(mnt, &current->nsproxy->mnt_ns->list, mnt_list) {
 	if (strcmp(mnt->mnt_devname, "none") == 0)
 		continue;
-	if (strcmp(mnt->mnt_devname, "/") == 0)
-		continue;
+	printf("[%s]", mnt->mnt_devname);
 	memset(path, 0, sizeof(path));
 	// 3 cases: /dev/root, / and others
 	if (strcmp(mnt->mnt_devname, "/dev/root") == 0) {
