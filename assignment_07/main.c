@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 16:07:48 by rbourgea          #+#    #+#             */
-/*   Updated: 2022/05/28 12:00:13 by rbourgea         ###   ########.fr       */
+/*   Updated: 2022/05/30 14:58:05 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static ssize_t id_read(struct file *file, char __user *buf,
 	return simple_read_from_buffer(buf, count, f_pos, LOGIN,
 					strlen(LOGIN));
 }
- 
+
 static ssize_t id_write(struct file *file, const char __user *buf,
 			size_t count, loff_t *f_pos)
 {
